@@ -1,0 +1,251 @@
+Script started on 2019-08-13 05:48:47+0000
+]0;root@ip-172-31-94-28: /opt/notes/08122019root@ip-172-31-94-28:/opt/notes/08122019# apt policy maven
+maven:
+  Installed: (none)
+  Candidate: 3.6.0-1~18.04.1
+  Version table:
+     3.6.0-1~18.04.1 500
+        500 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages
+        500 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages
+     3.5.2-2 500
+        500 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 Packages
+]0;root@ip-172-31-94-28: /opt/notes/08122019root@ip-172-31-94-28:/opt/notes/08122019# apt install maven
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  libaopalliance-java libapache-pom-java libatinject-jsr330-api-java
+  libcdi-api-java libcommons-cli-java libcommons-io-java libcommons-lang3-java
+  libcommons-parent-java libgeronimo-annotation-1.3-spec-java
+  libgeronimo-interceptor-3.0-spec-java libguava-java libguice-java
+  libhawtjni-runtime-java libjansi-java libjansi-native-java libjsr305-java
+  libmaven-parent-java libmaven-resolver-java libmaven-shared-utils-java
+  libmaven3-core-java libplexus-cipher-java libplexus-classworlds-java
+  libplexus-component-annotations-java libplexus-interpolation-java
+  libplexus-sec-dispatcher-java libplexus-utils2-java libsisu-inject-java
+  libsisu-plexus-java libslf4j-java libwagon-file-java
+  libwagon-http-shaded-java libwagon-provider-api-java
+Suggested packages:
+  libaopalliance-java-doc libatinject-jsr330-api-java-doc libservlet3.1-java
+  libcommons-io-java-doc libcommons-lang3-java-doc libasm-java libcglib-java
+  libjsr305-java-doc libmaven-shared-utils-java-doc liblogback-java
+  libplexus-cipher-java-doc libplexus-classworlds-java-doc
+  libplexus-interpolation-java-doc libplexus-sec-dispatcher-java-doc
+  libplexus-utils2-java-doc junit4 testng libcommons-logging-java
+  liblog4j1.2-java
+The following NEW packages will be installed:
+  libaopalliance-java libapache-pom-java libatinject-jsr330-api-java
+  libcdi-api-java libcommons-cli-java libcommons-io-java libcommons-lang3-java
+  libcommons-parent-java libgeronimo-annotation-1.3-spec-java
+  libgeronimo-interceptor-3.0-spec-java libguava-java libguice-java
+  libhawtjni-runtime-java libjansi-java libjansi-native-java libjsr305-java
+  libmaven-parent-java libmaven-resolver-java libmaven-shared-utils-java
+  libmaven3-core-java libplexus-cipher-java libplexus-classworlds-java
+  libplexus-component-annotations-java libplexus-interpolation-java
+  libplexus-sec-dispatcher-java libplexus-utils2-java libsisu-inject-java
+  libsisu-plexus-java libslf4j-java libwagon-file-java
+  libwagon-http-shaded-java libwagon-provider-api-java maven
+0 upgraded, 33 newly installed, 0 to remove and 14 not upgraded.
+Need to get 8916 kB of archives.
+After this operation, 11.8 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+[33m0% [Working][0m            Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libapache-pom-java all 18-1 [4720 B]
+[33m0% [1 libapache-pom-java 0 B/4720 B 0%][0m[33m                                       1% [Working][0m            Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libatinject-jsr330-api-java all 1.0+ds1-5 [5348 B]
+[33m1% [2 libatinject-jsr330-api-java 0 B/5348 B 0%][0m[33m                                                1% [Working][0m            Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libgeronimo-interceptor-3.0-spec-java all 1.0.1-4fakesync [8616 B]
+[33m1% [3 libgeronimo-interceptor-3.0-spec-java 0 B/8616 B 0%][0m[33m                                                          2% [Working][0m            Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libcdi-api-java all 1.2-2 [54.5 kB]
+[33m2% [4 libcdi-api-java 0 B/54.5 kB 0%][0m[33m                                     3% [Working][0m            Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libcommons-cli-java all 1.4-1 [53.8 kB]
+[33m3% [5 libcommons-cli-java 0 B/53.8 kB 0%][0m[33m                                         4% [Working][0m            Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libcommons-parent-java all 43-1 [10.8 kB]
+[33m4% [6 libcommons-parent-java 0 B/10.8 kB 0%][0m[33m                                            5% [Working][0m            Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libcommons-io-java all 2.6-2 [198 kB]
+[33m5% [7 libcommons-io-java 0 B/198 kB 0%][0m[33m                                       7% [Working][0m            Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 libcommons-lang3-java all 3.8-1~18.04.2 [479 kB]
+[33m7% [8 libcommons-lang3-java 0 B/479 kB 0%][0m[33m                                          12% [Working][0m             Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libgeronimo-annotation-1.3-spec-java all 1.0-1 [10.7 kB]
+[33m12% [9 libgeronimo-annotation-1.3-spec-java 0 B/10.7 kB 0%][0m[33m                                                           13% [Working][0m             Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libjsr305-java all 0.1~+svn49-10 [26.5 kB]
+[33m13% [10 libjsr305-java 0 B/26.5 kB 0%][0m[33m                                      14% [Working][0m             Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libguava-java all 19.0-1 [2028 kB]
+[33m14% [11 libguava-java 0 B/2028 kB 0%][0m[33m                                     33% [Working][0m             Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libaopalliance-java all 20070526-6 [9084 B]
+[33m33% [12 libaopalliance-java 0 B/9084 B 0%][0m[33m                                          33% [Working][0m             Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libguice-java all 4.0-4 [853 kB]
+[33m33% [13 libguice-java 0 B/853 kB 0%][0m[33m                                    41% [Working][0m             Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libhawtjni-runtime-java all 1.15-2 [27.1 kB]
+[33m41% [14 libhawtjni-runtime-java 0 B/27.1 kB 0%][0m[33m                                               42% [Working][0m             Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libjansi-native-java all 1.7-1 [19.4 kB]
+[33m42% [15 libjansi-native-java 0 B/19.4 kB 0%][0m[33m                                            43% [Working][0m             Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libjansi-java all 1.16-1 [36.2 kB]
+[33m43% [16 libjansi-java 0 B/36.2 kB 0%][0m[33m                                     44% [Working][0m             Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 libmaven-parent-java all 31-2~18.04 [5196 B]
+[33m44% [17 libmaven-parent-java 0 B/5196 B 0%][0m[33m                                           45% [Working][0m             Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libplexus-utils2-java all 3.0.24-3 [246 kB]
+[33m45% [18 libplexus-utils2-java 0 B/246 kB 0%][0m[33m                                            47% [Working][0m             Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libwagon-provider-api-java all 3.0.0-2 [48.2 kB]
+[33m47% [19 libwagon-provider-api-java 0 B/48.2 kB 0%][0m[33m                                                  49% [Working][0m             Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 libmaven-resolver-java all 1.3.1-1~18.04 [549 kB]
+[33m49% [20 libmaven-resolver-java 0 B/549 kB 0%][0m[33m                                             54% [Working][0m             Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 libmaven-shared-utils-java all 3.3.0-1~18.04 [149 kB]
+[33m54% [21 libmaven-shared-utils-java 0 B/149 kB 0%][0m[33m                                                 56% [Working][0m             Get:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libplexus-cipher-java all 1.7-3 [15.1 kB]
+[33m56% [22 libplexus-cipher-java 0 B/15.1 kB 0%][0m[33m                                             57% [Working][0m             Get:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libplexus-classworlds-java all 2.5.2-2 [49.3 kB]
+[33m57% [23 libplexus-classworlds-java 0 B/49.3 kB 0%][0m[33m                                                  58% [Working][0m             Get:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libplexus-component-annotations-java all 1.7.1-7 [6596 B]
+[33m58% [24 libplexus-component-annotations-java 0 B/6596 B 0%][0m[33m                                                           58% [Working][0m             Get:25 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libplexus-interpolation-java all 1.24-1 [73.4 kB]
+[33m58% [25 libplexus-interpolation-java 0 B/73.4 kB 0%][0m[33m                                                    60% [Working][0m             Get:26 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libplexus-sec-dispatcher-java all 1.4-3 [28.0 kB]
+[33m60% [26 libplexus-sec-dispatcher-java 0 B/28.0 kB 0%][0m[33m                                                     61% [Working][0m             Get:27 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libslf4j-java all 1.7.25-3 [141 kB]
+[33m61% [27 libslf4j-java 0 B/141 kB 0%][0m[33m                                    62% [Working][0m             Get:28 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libsisu-inject-java all 0.3.2-2 [346 kB]
+[33m62% [28 libsisu-inject-java 0 B/346 kB 0%][0m[33m                                          66% [Working][0m             Get:29 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libsisu-plexus-java all 0.3.3-3 [182 kB]
+[33m66% [29 libsisu-plexus-java 0 B/182 kB 0%][0m[33m                                          68% [Working][0m             Get:30 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 libmaven3-core-java all 3.6.0-1~18.04.1 [1465 kB]
+[33m68% [30 libmaven3-core-java 0 B/1465 kB 0%][0m[33m                                           82% [Working][0m             Get:31 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libwagon-file-java all 3.0.0-2 [7960 B]
+[33m82% [31 libwagon-file-java 0 B/7960 B 0%][0m[33m                                         83% [Working][0m             Get:32 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 libwagon-http-shaded-java all 3.0.0-2 [1757 kB]
+[33m83% [32 libwagon-http-shaded-java 0 B/1757 kB 0%][0m[33m                                                 99% [Working][0m             Get:33 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 maven all 3.6.0-1~18.04.1 [22.4 kB]
+[33m99% [33 maven 0 B/22.4 kB 0%][0m[33m                             100% [Working][0m              Fetched 8916 kB in 0s (28.7 MB/s)
+Extracting templates from packages: 90%Extracting templates from packages: 100%
+
+7[0;23r8[1ASelecting previously unselected package libapache-pom-java.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 59500 files and directories currently installed.)
+Preparing to unpack .../00-libapache-pom-java_18-1_all.deb ...
+7[24;0f[42m[30mProgress: [  0%][49m[39m [..........................................................] 8Unpacking libapache-pom-java (18-1) ...
+7[24;0f[42m[30mProgress: [  1%][49m[39m [..........................................................] 8Selecting previously unselected package libatinject-jsr330-api-java.
+Preparing to unpack .../01-libatinject-jsr330-api-java_1.0+ds1-5_all.deb ...
+7[24;0f[42m[30mProgress: [  2%][49m[39m [#.........................................................] 8Unpacking libatinject-jsr330-api-java (1.0+ds1-5) ...
+7[24;0f[42m[30mProgress: [  3%][49m[39m [#.........................................................] 8Selecting previously unselected package libgeronimo-interceptor-3.0-spec-java.
+Preparing to unpack .../02-libgeronimo-interceptor-3.0-spec-java_1.0.1-4fakesync_all.deb ...
+7[24;0f[42m[30mProgress: [  4%][49m[39m [##........................................................] 8Unpacking libgeronimo-interceptor-3.0-spec-java (1.0.1-4fakesync) ...
+7[24;0f[42m[30mProgress: [  5%][49m[39m [###.......................................................] 8Selecting previously unselected package libcdi-api-java.
+Preparing to unpack .../03-libcdi-api-java_1.2-2_all.deb ...
+7[24;0f[42m[30mProgress: [  6%][49m[39m [###.......................................................] 8Unpacking libcdi-api-java (1.2-2) ...
+7[24;0f[42m[30mProgress: [  7%][49m[39m [####......................................................] 8Selecting previously unselected package libcommons-cli-java.
+Preparing to unpack .../04-libcommons-cli-java_1.4-1_all.deb ...
+Unpacking libcommons-cli-java (1.4-1) ...
+7[24;0f[42m[30mProgress: [  8%][49m[39m [####......................................................] 87[24;0f[42m[30mProgress: [  9%][49m[39m [#####.....................................................] 8Selecting previously unselected package libcommons-parent-java.
+Preparing to unpack .../05-libcommons-parent-java_43-1_all.deb ...
+Unpacking libcommons-parent-java (43-1) ...
+7[24;0f[42m[30mProgress: [ 10%][49m[39m [#####.....................................................] 8Selecting previously unselected package libcommons-io-java.
+Preparing to unpack .../06-libcommons-io-java_2.6-2_all.deb ...
+7[24;0f[42m[30mProgress: [ 11%][49m[39m [######....................................................] 8Unpacking libcommons-io-java (2.6-2) ...
+7[24;0f[42m[30mProgress: [ 12%][49m[39m [######....................................................] 8Selecting previously unselected package libcommons-lang3-java.
+Preparing to unpack .../07-libcommons-lang3-java_3.8-1~18.04.2_all.deb ...
+7[24;0f[42m[30mProgress: [ 13%][49m[39m [#######...................................................] 8Unpacking libcommons-lang3-java (3.8-1~18.04.2) ...
+7[24;0f[42m[30mProgress: [ 14%][49m[39m [########..................................................] 8Selecting previously unselected package libgeronimo-annotation-1.3-spec-java.
+Preparing to unpack .../08-libgeronimo-annotation-1.3-spec-java_1.0-1_all.deb ...
+7[24;0f[42m[30mProgress: [ 15%][49m[39m [########..................................................] 8Unpacking libgeronimo-annotation-1.3-spec-java (1.0-1) ...
+7[24;0f[42m[30mProgress: [ 16%][49m[39m [#########.................................................] 8Selecting previously unselected package libjsr305-java.
+Preparing to unpack .../09-libjsr305-java_0.1~+svn49-10_all.deb ...
+Unpacking libjsr305-java (0.1~+svn49-10) ...
+7[24;0f[42m[30mProgress: [ 17%][49m[39m [##########................................................] 87[24;0f[42m[30mProgress: [ 18%][49m[39m [##########................................................] 8Selecting previously unselected package libguava-java.
+Preparing to unpack .../10-libguava-java_19.0-1_all.deb ...
+Unpacking libguava-java (19.0-1) ...
+7[24;0f[42m[30mProgress: [ 19%][49m[39m [###########...............................................] 8Selecting previously unselected package libaopalliance-java.
+Preparing to unpack .../11-libaopalliance-java_20070526-6_all.deb ...
+7[24;0f[42m[30mProgress: [ 20%][49m[39m [###########...............................................] 8Unpacking libaopalliance-java (20070526-6) ...
+7[24;0f[42m[30mProgress: [ 21%][49m[39m [############..............................................] 8Selecting previously unselected package libguice-java.
+Preparing to unpack .../12-libguice-java_4.0-4_all.deb ...
+7[24;0f[42m[30mProgress: [ 22%][49m[39m [############..............................................] 8Unpacking libguice-java (4.0-4) ...
+7[24;0f[42m[30mProgress: [ 23%][49m[39m [#############.............................................] 8Selecting previously unselected package libhawtjni-runtime-java.
+Preparing to unpack .../13-libhawtjni-runtime-java_1.15-2_all.deb ...
+7[24;0f[42m[30mProgress: [ 24%][49m[39m [#############.............................................] 8Unpacking libhawtjni-runtime-java (1.15-2) ...
+7[24;0f[42m[30mProgress: [ 25%][49m[39m [##############............................................] 8Selecting previously unselected package libjansi-native-java.
+Preparing to unpack .../14-libjansi-native-java_1.7-1_all.deb ...
+Unpacking libjansi-native-java (1.7-1) ...
+7[24;0f[42m[30mProgress: [ 27%][49m[39m [###############...........................................] 87[24;0f[42m[30mProgress: [ 27%][49m[39m [###############...........................................] 8Selecting previously unselected package libjansi-java.
+Preparing to unpack .../15-libjansi-java_1.16-1_all.deb ...
+Unpacking libjansi-java (1.16-1) ...
+7[24;0f[42m[30mProgress: [ 28%][49m[39m [################..........................................] 8Selecting previously unselected package libmaven-parent-java.
+Preparing to unpack .../16-libmaven-parent-java_31-2~18.04_all.deb ...
+7[24;0f[42m[30mProgress: [ 30%][49m[39m [#################.........................................] 8Unpacking libmaven-parent-java (31-2~18.04) ...
+7[24;0f[42m[30mProgress: [ 30%][49m[39m [#################.........................................] 8Selecting previously unselected package libplexus-utils2-java.
+Preparing to unpack .../17-libplexus-utils2-java_3.0.24-3_all.deb ...
+7[24;0f[42m[30mProgress: [ 31%][49m[39m [##################........................................] 8Unpacking libplexus-utils2-java (3.0.24-3) ...
+7[24;0f[42m[30mProgress: [ 33%][49m[39m [##################........................................] 8Selecting previously unselected package libwagon-provider-api-java.
+Preparing to unpack .../18-libwagon-provider-api-java_3.0.0-2_all.deb ...
+7[24;0f[42m[30mProgress: [ 33%][49m[39m [###################.......................................] 8Unpacking libwagon-provider-api-java (3.0.0-2) ...
+7[24;0f[42m[30mProgress: [ 34%][49m[39m [###################.......................................] 8Selecting previously unselected package libmaven-resolver-java.
+Preparing to unpack .../19-libmaven-resolver-java_1.3.1-1~18.04_all.deb ...
+Unpacking libmaven-resolver-java (1.3.1-1~18.04) ...
+7[24;0f[42m[30mProgress: [ 36%][49m[39m [####################......................................] 87[24;0f[42m[30mProgress: [ 36%][49m[39m [####################......................................] 8Selecting previously unselected package libmaven-shared-utils-java.
+Preparing to unpack .../20-libmaven-shared-utils-java_3.3.0-1~18.04_all.deb ...
+Unpacking libmaven-shared-utils-java (3.3.0-1~18.04) ...
+7[24;0f[42m[30mProgress: [ 37%][49m[39m [#####################.....................................] 8Selecting previously unselected package libplexus-cipher-java.
+Preparing to unpack .../21-libplexus-cipher-java_1.7-3_all.deb ...
+7[24;0f[42m[30mProgress: [ 39%][49m[39m [######################....................................] 8Unpacking libplexus-cipher-java (1.7-3) ...
+7[24;0f[42m[30mProgress: [ 39%][49m[39m [######################....................................] 8Selecting previously unselected package libplexus-classworlds-java.
+Preparing to unpack .../22-libplexus-classworlds-java_2.5.2-2_all.deb ...
+7[24;0f[42m[30mProgress: [ 40%][49m[39m [#######################...................................] 8Unpacking libplexus-classworlds-java (2.5.2-2) ...
+7[24;0f[42m[30mProgress: [ 42%][49m[39m [########################..................................] 8Selecting previously unselected package libplexus-component-annotations-java.
+Preparing to unpack .../23-libplexus-component-annotations-java_1.7.1-7_all.deb ...
+7[24;0f[42m[30mProgress: [ 42%][49m[39m [########################..................................] 8Unpacking libplexus-component-annotations-java (1.7.1-7) ...
+7[24;0f[42m[30mProgress: [ 43%][49m[39m [#########################.................................] 8Selecting previously unselected package libplexus-interpolation-java.
+Preparing to unpack .../24-libplexus-interpolation-java_1.24-1_all.deb ...
+Unpacking libplexus-interpolation-java (1.24-1) ...
+7[24;0f[42m[30mProgress: [ 45%][49m[39m [#########################.................................] 87[24;0f[42m[30mProgress: [ 45%][49m[39m [##########################................................] 8Selecting previously unselected package libplexus-sec-dispatcher-java.
+Preparing to unpack .../25-libplexus-sec-dispatcher-java_1.4-3_all.deb ...
+Unpacking libplexus-sec-dispatcher-java (1.4-3) ...
+7[24;0f[42m[30mProgress: [ 46%][49m[39m [##########################................................] 8Selecting previously unselected package libslf4j-java.
+Preparing to unpack .../26-libslf4j-java_1.7.25-3_all.deb ...
+7[24;0f[42m[30mProgress: [ 48%][49m[39m [###########################...............................] 8Unpacking libslf4j-java (1.7.25-3) ...
+7[24;0f[42m[30mProgress: [ 48%][49m[39m [###########################...............................] 8Selecting previously unselected package libsisu-inject-java.
+Preparing to unpack .../27-libsisu-inject-java_0.3.2-2_all.deb ...
+7[24;0f[42m[30mProgress: [ 49%][49m[39m [############################..............................] 8Unpacking libsisu-inject-java (0.3.2-2) ...
+7[24;0f[42m[30mProgress: [ 50%][49m[39m [#############################.............................] 8Selecting previously unselected package libsisu-plexus-java.
+Preparing to unpack .../28-libsisu-plexus-java_0.3.3-3_all.deb ...
+7[24;0f[42m[30mProgress: [ 51%][49m[39m [#############################.............................] 8Unpacking libsisu-plexus-java (0.3.3-3) ...
+7[24;0f[42m[30mProgress: [ 52%][49m[39m [##############################............................] 8Selecting previously unselected package libmaven3-core-java.
+Preparing to unpack .../29-libmaven3-core-java_3.6.0-1~18.04.1_all.deb ...
+7[24;0f[42m[30mProgress: [ 53%][49m[39m [##############################............................] 8Unpacking libmaven3-core-java (3.6.0-1~18.04.1) ...
+7[24;0f[42m[30mProgress: [ 54%][49m[39m [###############################...........................] 8Selecting previously unselected package libwagon-file-java.
+Preparing to unpack .../30-libwagon-file-java_3.0.0-2_all.deb ...
+Unpacking libwagon-file-java (3.0.0-2) ...
+7[24;0f[42m[30mProgress: [ 55%][49m[39m [################################..........................] 87[24;0f[42m[30mProgress: [ 56%][49m[39m [################################..........................] 8Selecting previously unselected package libwagon-http-shaded-java.
+Preparing to unpack .../31-libwagon-http-shaded-java_3.0.0-2_all.deb ...
+Unpacking libwagon-http-shaded-java (3.0.0-2) ...
+7[24;0f[42m[30mProgress: [ 57%][49m[39m [#################################.........................] 8Selecting previously unselected package maven.
+Preparing to unpack .../32-maven_3.6.0-1~18.04.1_all.deb ...
+7[24;0f[42m[30mProgress: [ 58%][49m[39m [#################################.........................] 8Unpacking maven (3.6.0-1~18.04.1) ...
+7[24;0f[42m[30mProgress: [ 59%][49m[39m [##################################........................] 8Setting up libslf4j-java (1.7.25-3) ...
+7[24;0f[42m[30mProgress: [ 60%][49m[39m [##################################........................] 8Setting up libplexus-classworlds-java (2.5.2-2) ...
+7[24;0f[42m[30mProgress: [ 61%][49m[39m [###################################.......................] 87[24;0f[42m[30mProgress: [ 62%][49m[39m [###################################.......................] 8Setting up libhawtjni-runtime-java (1.15-2) ...
+7[24;0f[42m[30mProgress: [ 63%][49m[39m [####################################......................] 8Setting up libplexus-cipher-java (1.7-3) ...
+7[24;0f[42m[30mProgress: [ 64%][49m[39m [#####################################.....................] 8Setting up libplexus-interpolation-java (1.24-1) ...
+7[24;0f[42m[30mProgress: [ 65%][49m[39m [#####################################.....................] 8Setting up libplexus-component-annotations-java (1.7.1-7) ...
+7[24;0f[42m[30mProgress: [ 66%][49m[39m [######################################....................] 8Setting up libplexus-utils2-java (3.0.24-3) ...
+7[24;0f[42m[30mProgress: [ 67%][49m[39m [#######################################...................] 87[24;0f[42m[30mProgress: [ 68%][49m[39m [#######################################...................] 8Setting up libwagon-provider-api-java (3.0.0-2) ...
+7[24;0f[42m[30mProgress: [ 69%][49m[39m [########################################..................] 8Setting up libjsr305-java (0.1~+svn49-10) ...
+7[24;0f[42m[30mProgress: [ 70%][49m[39m [########################################..................] 8Setting up libgeronimo-interceptor-3.0-spec-java (1.0.1-4fakesync) ...
+7[24;0f[42m[30mProgress: [ 71%][49m[39m [#########################################.................] 8Setting up libmaven-resolver-java (1.3.1-1~18.04) ...
+7[24;0f[42m[30mProgress: [ 72%][49m[39m [#########################################.................] 8Setting up libjansi-native-java (1.7-1) ...
+7[24;0f[42m[30mProgress: [ 73%][49m[39m [##########################################................] 87[24;0f[42m[30mProgress: [ 74%][49m[39m [##########################################................] 8Setting up libwagon-http-shaded-java (3.0.0-2) ...
+7[24;0f[42m[30mProgress: [ 75%][49m[39m [###########################################...............] 8Setting up libapache-pom-java (18-1) ...
+7[24;0f[42m[30mProgress: [ 77%][49m[39m [############################################..............] 8Setting up libatinject-jsr330-api-java (1.0+ds1-5) ...
+7[24;0f[42m[30mProgress: [ 77%][49m[39m [############################################..............] 8Setting up libmaven-parent-java (31-2~18.04) ...
+7[24;0f[42m[30mProgress: [ 78%][49m[39m [#############################################.............] 8Setting up libaopalliance-java (20070526-6) ...
+7[24;0f[42m[30mProgress: [ 80%][49m[39m [##############################################............] 87[24;0f[42m[30mProgress: [ 80%][49m[39m [##############################################............] 8Setting up libgeronimo-annotation-1.3-spec-java (1.0-1) ...
+7[24;0f[42m[30mProgress: [ 81%][49m[39m [###############################################...........] 8Setting up libcommons-cli-java (1.4-1) ...
+7[24;0f[42m[30mProgress: [ 83%][49m[39m [###############################################...........] 8Setting up libplexus-sec-dispatcher-java (1.4-3) ...
+7[24;0f[42m[30mProgress: [ 83%][49m[39m [################################################..........] 8Setting up libjansi-java (1.16-1) ...
+7[24;0f[42m[30mProgress: [ 84%][49m[39m [################################################..........] 8Setting up libguava-java (19.0-1) ...
+7[24;0f[42m[30mProgress: [ 86%][49m[39m [#################################################.........] 87[24;0f[42m[30mProgress: [ 86%][49m[39m [#################################################.........] 8Setting up libwagon-file-java (3.0.0-2) ...
+7[24;0f[42m[30mProgress: [ 87%][49m[39m [##################################################........] 8Setting up libcommons-parent-java (43-1) ...
+7[24;0f[42m[30mProgress: [ 89%][49m[39m [###################################################.......] 8Setting up libcdi-api-java (1.2-2) ...
+7[24;0f[42m[30mProgress: [ 89%][49m[39m [###################################################.......] 8Setting up libcommons-lang3-java (3.8-1~18.04.2) ...
+7[24;0f[42m[30mProgress: [ 90%][49m[39m [####################################################......] 8Setting up libcommons-io-java (2.6-2) ...
+7[24;0f[42m[30mProgress: [ 92%][49m[39m [#####################################################.....] 87[24;0f[42m[30mProgress: [ 92%][49m[39m [#####################################################.....] 8Setting up libguice-java (4.0-4) ...
+7[24;0f[42m[30mProgress: [ 93%][49m[39m [######################################################....] 8Setting up libmaven-shared-utils-java (3.3.0-1~18.04) ...
+7[24;0f[42m[30mProgress: [ 95%][49m[39m [######################################################....] 8Setting up libsisu-inject-java (0.3.2-2) ...
+7[24;0f[42m[30mProgress: [ 95%][49m[39m [#######################################################...] 8Setting up libsisu-plexus-java (0.3.3-3) ...
+7[24;0f[42m[30mProgress: [ 96%][49m[39m [#######################################################...] 8Setting up libmaven3-core-java (3.6.0-1~18.04.1) ...
+7[24;0f[42m[30mProgress: [ 98%][49m[39m [########################################################..] 87[24;0f[42m[30mProgress: [ 98%][49m[39m [########################################################..] 8Setting up maven (3.6.0-1~18.04.1) ...
+update-alternatives: using /usr/share/maven/bin/mvn to provide /usr/bin/mvn (mvn) in auto mode
+7[24;0f[42m[30mProgress: [ 99%][49m[39m [#########################################################.] 8
+7[0;24r8[1A[J]0;root@ip-172-31-94-28: /opt/notes/08122019root@ip-172-31-94-28:/opt/notes/08122019# mvn -version
+[1mApache Maven 3.6.0[m
+Maven home: /usr/share/maven
+Java version: 11.0.4, vendor: Ubuntu, runtime: /usr/lib/jvm/java-11-openjdk-amd64
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "4.15.0-1044-aws", arch: "amd64", family: "unix"
+]0;root@ip-172-31-94-28: /opt/notes/08122019root@ip-172-31-94-28:/opt/notes/08122019# ls -lsa /usr/share/ma
+man/        man-db/     maven/      maven-repo/ 
+]0;root@ip-172-31-94-28: /opt/notes/08122019root@ip-172-31-94-28:/opt/notes/08122019# ls -lsa /usr/share/maven
+total 24
+4 drwxr-xr-x   6 root root 4096 Aug 13 05:49 [0m[01;34m.[0m
+4 drwxr-xr-x 120 root root 4096 Aug 13 05:49 [01;34m..[0m
+4 drwxr-xr-x   2 root root 4096 Aug 13 05:49 [01;34mbin[0m
+4 drwxr-xr-x   2 root root 4096 Aug 13 05:49 [01;34mboot[0m
+0 lrwxrwxrwx   1 root root   10 Apr  9 21:35 [01;36mconf[0m -> [01;34m/etc/maven[0m
+4 drwxr-xr-x   2 root root 4096 Aug 13 05:49 [01;34mlib[0m
+4 drwxr-xr-x   2 root root 4096 Aug 13 05:49 [01;34mman[0m
+]0;root@ip-172-31-94-28: /opt/notes/08122019root@ip-172-31-94-28:/opt/notes/08122019# ls -las /etc/maven/
+total 32
+ 4 drwxr-xr-x  3 root root  4096 Aug 13 05:49 [0m[01;34m.[0m
+ 4 drwxr-xr-x 93 root root  4096 Aug 13 05:49 [01;34m..[0m
+ 4 drwxr-xr-x  2 root root  4096 Aug 13 05:49 [01;34mlogging[0m
+ 4 -rw-r--r--  1 root root   220 Oct 24  2018 m2.conf
+12 -rw-r--r--  1 root root 10211 Oct 24  2018 settings.xml
+ 4 -rw-r--r--  1 root root  3645 Oct 24  2018 toolchains.xml
+]0;root@ip-172-31-94-28: /opt/notes/08122019root@ip-172-31-94-28:/opt/notes/08122019# exit
+exit
+
+Script done on 2019-08-13 05:51:57+0000

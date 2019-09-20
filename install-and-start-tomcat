@@ -1,0 +1,24 @@
+---
+  # Name of the Play
+  - name: Apache installation Play
+    # host group name, you wanna run the task aginst
+    hosts: webservers
+    # Do you want to run this task as different user. then set become as yes
+    become: yes
+    # Set What user you want to run these tasks as, If not mentioned, By Default it would take root  
+    become_user: root 
+    # list of tasks, All the tasks comes beneath  
+    tasks: 
+    # The Task Name, which Will be printed while as the playbook run  
+  - name: ensure apache is at the latest version 
+    # A module, There are many modules ansible provides  
+    yum: 
+    # Parameters to the module, It varies for each module  
+    name: httpd  
+    state: latest  
+  - name: ensure apache is running 
+    # Yet another module  
+    service: 
+    # Parameters to the module  
+    name: httpd  
+    state: started

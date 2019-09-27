@@ -1,0 +1,358 @@
+Script started on 2019-09-20 02:00:07+0000
+]0;root@ip-172-31-94-28: /opt/notes/09192019root@ip-172-31-94-28:/opt/notes/09192019# pwd
+/opt/notes/09192019
+]0;root@ip-172-31-94-28: /opt/notes/09192019root@ip-172-31-94-28:/opt/notes/09192019# cd ../..
+]0;root@ip-172-31-94-28: /optroot@ip-172-31-94-28:/opt# ls
+[0m[01;34mgit[0m  install-configure-tomcat  [01;34mnotes[0m  [01;34mtomcat[0m
+]0;root@ip-172-31-94-28: /optroot@ip-172-31-94-28:/opt# mkdoi[K[Kir ansible
+]0;root@ip-172-31-94-28: /optroot@ip-172-31-94-28:/opt# cd ansible/
+]0;root@ip-172-31-94-28: /opt/ansibleroot@ip-172-31-94-28:/opt/ansible# apt-get update
+0% [Working]            Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+0% [Connecting to security.ubuntu.com (91.189.88.149)]                                                      Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+                                                      Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+0% [Connecting to security.ubuntu.com (91.189.88.149)] [Connecting to pkg.jenki0% [1 InRelease gpgv 242 kB] [Connecting to security.ubuntu.com (91.189.88.149)                                                                               Ign:4 http://pkg.jenkins.io/debian-stable binary/ InRelease
+0% [1 InRelease gpgv 242 kB] [Connecting to security.ubuntu.com (91.189.88.149)                                                                               Hit:5 http://pkg.jenkins.io/debian-stable binary/ Release
+0% [1 InRelease gpgv 242 kB] [Connecting to security.ubuntu.com (91.189.88.149)                                                                               0% [Waiting for headers]0% [2 InRelease gpgv 88.7 kB] [Waiting for headers]                                                   Get:6 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+0% [2 InRelease gpgv 88.7 kB] [6 InRelease 14.2 kB/88.7 kB 16%]                                                               0% [6 InRelease 14.2 kB/88.7 kB 16%]0% [3 InRelease gpgv 74.6 kB] [6 InRelease 14.2 kB/88.7 kB 16%]                                                               0% [6 InRelease 14.2 kB/88.7 kB 16%]0% [Release.gpg gpgv 2042 B] [6 InRelease 14.2 kB/88.7 kB 16%]                                                              0% [6 InRelease 43.1 kB/88.7 kB 49%]                                    0% [Working]0% [6 InRelease gpgv 88.7 kB]                             100% [Working]              Fetched 252 kB in 1s (476 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 5%Reading package lists... 5%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 49%Reading package lists... 49%Reading package lists... 50%Reading package lists... 71%Reading package lists... 71%Reading package lists... 72%Reading package lists... 72%Reading package lists... 72%Reading package lists... 72%Reading package lists... 76%Reading package lists... 76%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 86%Reading package lists... 86%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 91%Reading package lists... 91%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+]0;root@ip-172-31-94-28: /opt/ansibleroot@ip-172-31-94-28:/opt/ansible# apt install software-properties-common
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  python3-software-properties
+The following packages will be upgraded:
+  python3-software-properties software-properties-common
+2 upgraded, 0 newly installed, 0 to remove and 44 not upgraded.
+Need to get 33.6 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Do you want to continue? [Y/n] y
+[33m0% [Working][0m            Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 software-properties-common all 0.96.24.32.11 [9996 B]
+[33m0% [1 software-properties-common 0 B/9996 B 0%][0m[33m                                               34% [Working][0m             Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python3-software-properties all 0.96.24.32.11 [23.6 kB]
+[33m34% [2 python3-software-properties 0 B/23.6 kB 0%][0m[33m                                                  100% [Working][0m              Fetched 33.6 kB in 0s (2047 kB/s)
+
+7[0;23r8[1A(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 115315 files and directories currently installed.)
+Preparing to unpack .../software-properties-common_0.96.24.32.11_all.deb ...
+7[24;0f[42m[30mProgress: [  0%][49m[39m [..........................................................] 87[24;0f[42m[30mProgress: [  9%][49m[39m [#####.....................................................] 8Unpacking software-properties-common (0.96.24.32.11) over (0.96.24.32.9) ...
+7[24;0f[42m[30mProgress: [ 18%][49m[39m [##########................................................] 87[24;0f[42m[30mProgress: [ 27%][49m[39m [###############...........................................] 8Preparing to unpack .../python3-software-properties_0.96.24.32.11_all.deb ...
+7[24;0f[42m[30mProgress: [ 36%][49m[39m [#####################.....................................] 8Unpacking python3-software-properties (0.96.24.32.11) over (0.96.24.32.9) ...
+7[24;0f[42m[30mProgress: [ 45%][49m[39m [##########################................................] 87[24;0f[42m[30mProgress: [ 55%][49m[39m [###############################...........................] 8Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Setting up python3-software-properties (0.96.24.32.11) ...
+7[24;0f[42m[30mProgress: [ 64%][49m[39m [####################################......................] 87[24;0f[42m[30mProgress: [ 73%][49m[39m [##########################################................] 8Processing triggers for dbus (1.12.2-1ubuntu1.1) ...
+Setting up software-properties-common (0.96.24.32.11) ...
+7[24;0f[42m[30mProgress: [ 82%][49m[39m [###############################################...........] 87[24;0f[42m[30mProgress: [ 91%][49m[39m [####################################################......] 8
+7[0;24r8[1A[J]0;root@ip-172-31-94-28: /opt/ansibleroot@ip-172-31-94-28:/opt/ansible# apt-add-repository ppa:ansible/ansible
+ Ansible is a radically simple IT automation platform that makes your applications and systems easier to deploy. Avoid writing scripts or custom code to deploy and update your applications— automate in a language that approaches plain English, using SSH, with no agents to install on remote systems.
+
+http://ansible.com/
+ More info: https://launchpad.net/~ansible/+archive/ubuntu/ansible
+Press [ENTER] to continue or Ctrl-c to cancel adding it.
+
+0% [Working]            Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+0% [Connecting to security.ubuntu.com (91.189.88.24)] [Connecting to ppa.launch                                                                               Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+                                                                               Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+0% [Connecting to security.ubuntu.com (91.189.88.24)] [Connecting to ppa.launch0% [1 InRelease gpgv 242 kB] [Connecting to security.ubuntu.com (91.189.88.24)]                                                                               Ign:4 http://pkg.jenkins.io/debian-stable binary/ InRelease
+0% [1 InRelease gpgv 242 kB] [Connecting to security.ubuntu.com (91.189.88.24)]                                                                               Hit:5 http://pkg.jenkins.io/debian-stable binary/ Release
+0% [1 InRelease gpgv 242 kB] [Connecting to security.ubuntu.com (91.189.88.24)]                                                                               0% [Waiting for headers] [Waiting for headers]0% [2 InRelease gpgv 88.7 kB] [Waiting for headers] [Waiting for headers]                                                                         Get:6 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+0% [2 InRelease gpgv 88.7 kB] [6 InRelease 2567 B/88.7 kB 3%] [Waiting for head                                                                               Get:7 http://ppa.launchpad.net/ansible/ansible/ubuntu bionic InRelease [15.9 kB]
+0% [2 InRelease gpgv 88.7 kB] [6 InRelease 2567 B/88.7 kB 3%] [7 InRelease 14.2                                                                               0% [6 InRelease 5463 B/88.7 kB 6%] [7 InRelease 14.2 kB/15.9 kB 89%]0% [3 InRelease gpgv 74.6 kB] [6 InRelease 5463 B/88.7 kB 6%] [7 InRelease 14.2                                                                               0% [6 InRelease 14.2 kB/88.7 kB 16%] [7 InRelease 14.2 kB/15.9 kB 89%]0% [Release.gpg gpgv 2042 B] [6 InRelease 14.2 kB/88.7 kB 16%] [7 InRelease 14.                                                                               0% [Release.gpg gpgv 2042 B] [6 InRelease 18.5 kB/88.7 kB 21%]                                                              0% [6 InRelease 41.7 kB/88.7 kB 47%]0% [7 InRelease gpgv 15.9 kB] [6 InRelease 41.7 kB/88.7 kB 47%]                                                               0% [6 InRelease 60.5 kB/88.7 kB 68%]0% [Connecting to ppa.launchpad.net (91.189.95.83)]0% [6 InRelease gpgv 88.7 kB] [Connecting to ppa.launchpad.net (91.189.95.83)]                                                                              99% [Waiting for headers]                         Get:9 http://ppa.launchpad.net/ansible/ansible/ubuntu bionic/main amd64 Packages [528 B]
+                         99% [Working]99% [9 Packages store 0 B] [Connecting to ppa.launchpad.net (91.189.95.83)]                                                                           100% [Connecting to ppa.launchpad.net (91.189.95.83)]                                                     Get:10 http://ppa.launchpad.net/ansible/ansible/ubuntu bionic/main Translation-en [344 B]
+                                                     100% [Working]100% [10 Translation-en store 0 B]                                  100% [Working]              Fetched 269 kB in 1s (322 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 5%Reading package lists... 5%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 49%Reading package lists... 49%Reading package lists... 71%Reading package lists... 71%Reading package lists... 72%Reading package lists... 72%Reading package lists... 72%Reading package lists... 72%Reading package lists... 76%Reading package lists... 76%Reading package lists... 77%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 86%Reading package lists... 86%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 91%Reading package lists... 91%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+]0;root@ip-172-31-94-28: /opt/ansibleroot@ip-172-31-94-28:/opt/ansible# apt update
+[33m0% [Working][0m            Ign:1 http://pkg.jenkins.io/debian-stable binary/ InRelease
+[33m0% [Connecting to security.ubuntu.com (91.189.91.26)] [Connecting to ppa.launch[0m                                                                               Hit:2 http://pkg.jenkins.io/debian-stable binary/ Release
+[33m0% [Connecting to us-east-1.ec2.archive.ubuntu.com] [Connecting to security.ubu[0m                                                                               Hit:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+[33m0% [Waiting for headers] [Connecting to security.ubuntu.com (91.189.91.26)] [Co[0m                                                                               Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+[33m0% [4 InRelease 14.2 kB/88.7 kB 16%] [Connecting to security.ubuntu.com (91.189[0m[33m0% [Release.gpg gpgv 2042 B] [4 InRelease 40.3 kB/88.7 kB 45%] [Waiting for hea[0m[33m0% [Release.gpg gpgv 2042 B] [Waiting for headers] [Waiting for headers] [Conne[0m                                                                               Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+[33m0% [Release.gpg gpgv 2042 B] [5 InRelease 25.8 kB/74.6 kB 35%] [Waiting for hea[0m[33m0% [Release.gpg gpgv 2042 B] [Waiting for headers] [Connecting to ppa.launchpad[0m                                                                               Get:6 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+[33m0% [Release.gpg gpgv 2042 B] [6 InRelease 14.2 kB/88.7 kB 16%] [Connecting to p[0m[33m                                                                               0% [Release.gpg gpgv 2042 B] [Connecting to ppa.launchpad.net (91.189.95.83)][0m[33m                                                                             0% [Waiting for headers][0m[33m0% [3 InRelease gpgv 242 kB] [Waiting for headers][0m[33m                                                  0% [Waiting for headers][0m[33m0% [4 InRelease gpgv 88.7 kB] [Waiting for headers][0m                                                   Hit:8 http://ppa.launchpad.net/ansible/ansible/ubuntu bionic InRelease
+[33m                                                   0% [4 InRelease gpgv 88.7 kB][0m[33m                             0% [Working][0m[33m0% [5 InRelease gpgv 74.6 kB][0m[33m                             0% [Working][0m[33m0% [6 InRelease gpgv 88.7 kB][0m[33m                             0% [Working][0m[33m0% [8 InRelease gpgv 15.9 kB][0m[33m                             100% [Working][0m              Fetched 252 kB in 0s (511 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 5%Reading package lists... 5%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 49%Reading package lists... 49%Reading package lists... 71%Reading package lists... 71%Reading package lists... 72%Reading package lists... 72%Reading package lists... 72%Reading package lists... 72%Reading package lists... 76%Reading package lists... 76%Reading package lists... 76%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 79%Reading package lists... 86%Reading package lists... 86%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 88%Reading package lists... 91%Reading package lists... 91%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 93%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+44 packages can be upgraded. Run 'apt list --upgradable' to see them.
+]0;root@ip-172-31-94-28: /opt/ansibleroot@ip-172-31-94-28:/opt/ansible# apt install ansible
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  libpython-stdlib libpython2.7-minimal libpython2.7-stdlib python
+  python-asn1crypto python-cffi-backend python-crypto python-cryptography
+  python-enum34 python-httplib2 python-idna python-ipaddress python-jinja2
+  python-markupsafe python-minimal python-paramiko python-pkg-resources
+  python-pyasn1 python-setuptools python-six python-yaml python2.7
+  python2.7-minimal sshpass
+Suggested packages:
+  python-doc python-tk python-crypto-doc python-cryptography-doc
+  python-cryptography-vectors python-enum34-doc python-jinja2-doc
+  python-gssapi python-setuptools-doc python2.7-doc binutils binfmt-support
+The following NEW packages will be installed:
+  ansible libpython-stdlib libpython2.7-minimal libpython2.7-stdlib python
+  python-asn1crypto python-cffi-backend python-crypto python-cryptography
+  python-enum34 python-httplib2 python-idna python-ipaddress python-jinja2
+  python-markupsafe python-minimal python-paramiko python-pkg-resources
+  python-pyasn1 python-setuptools python-six python-yaml python2.7
+  python2.7-minimal sshpass
+0 upgraded, 25 newly installed, 0 to remove and 44 not upgraded.
+Need to get 10.7 MB of archives.
+After this operation, 73.4 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+[33m0% [Working][0m            Get:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpython2.7-minimal amd64 2.7.15-4ubuntu4~18.04.1 [336 kB]
+[33m0% [1 libpython2.7-minimal 0 B/336 kB 0%] [Connecting to ppa.launchpad.net (91.[0m[33m                                                                               3% [Connecting to ppa.launchpad.net (91.189.95.83)][0m                                                   Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python2.7-minimal amd64 2.7.15-4ubuntu4~18.04.1 [1293 kB]
+[33m3% [2 python2.7-minimal 0 B/1293 kB 0%] [Connecting to ppa.launchpad.net (91.18[0m[33m                                                                               14% [Connecting to ppa.launchpad.net (91.189.95.83)][0m                                                    Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 python-minimal amd64 2.7.15~rc1-1 [28.1 kB]
+[33m14% [3 python-minimal 0 B/28.1 kB 0%] [Connecting to ppa.launchpad.net (91.189.[0m[33m                                                                               15% [Connecting to ppa.launchpad.net (91.189.95.83)][0m                                                    Get:4 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 libpython2.7-stdlib amd64 2.7.15-4ubuntu4~18.04.1 [1915 kB]
+[33m15% [4 libpython2.7-stdlib 0 B/1915 kB 0%] [Connecting to ppa.launchpad.net (91[0m[33m                                                                               30% [Connecting to ppa.launchpad.net (91.189.95.83)][0m                                                    Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python2.7 amd64 2.7.15-4ubuntu4~18.04.1 [239 kB]
+[33m30% [5 python2.7 0 B/239 kB 0%] [Connecting to ppa.launchpad.net (91.189.95.83)[0m[33m                                                                               33% [Connecting to ppa.launchpad.net (91.189.95.83)][0m                                                    Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 libpython-stdlib amd64 2.7.15~rc1-1 [7620 B]
+[33m33% [6 libpython-stdlib 0 B/7620 B 0%] [Connecting to ppa.launchpad.net (91.189[0m[33m                                                                               33% [Connecting to ppa.launchpad.net (91.189.95.83)][0m                                                    Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 python amd64 2.7.15~rc1-1 [140 kB]
+[33m33% [7 python 0 B/140 kB 0%] [Connecting to ppa.launchpad.net (91.189.95.83)][0m[33m                                                                             35% [Connecting to ppa.launchpad.net (91.189.95.83)][0m                                                    Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 python-markupsafe amd64 1.0-1build1 [13.0 kB]
+[33m35% [8 python-markupsafe 0 B/13.0 kB 0%] [Connecting to ppa.launchpad.net (91.1[0m[33m                                                                               36% [Connecting to ppa.launchpad.net (91.189.95.83)][0m                                                    Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python-jinja2 all 2.10-1ubuntu0.18.04.1 [94.8 kB]
+[33m36% [9 python-jinja2 0 B/94.8 kB 0%] [Connecting to ppa.launchpad.net (91.189.9[0m[33m                                                                               38% [Connecting to ppa.launchpad.net (91.189.95.83)][0m                                                    Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 python-yaml amd64 3.12-1build2 [115 kB]
+[33m38% [10 python-yaml 0 B/115 kB 0%] [Connecting to ppa.launchpad.net (91.189.95.[0m[33m                                                                               39% [Waiting for headers][0m                         Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 python-asn1crypto all 0.24.0-1 [72.7 kB]
+[33m39% [11 python-asn1crypto 0 B/72.7 kB 0%] [Waiting for headers][0m[33m                                                               41% [Waiting for headers][0m                         Get:12 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 python-cffi-backend amd64 1.11.5-1 [63.4 kB]
+[33m41% [12 python-cffi-backend 0 B/63.4 kB 0%] [Waiting for headers][0m[33m                                                                 42% [Waiting for headers][0m                         Get:13 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 python-enum34 all 1.1.6-2 [34.8 kB]
+[33m42% [13 python-enum34 0 B/34.8 kB 0%] [Waiting for headers][0m[33m                                                           43% [Waiting for headers][0m                         Get:14 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 python-idna all 2.6-1 [32.4 kB]
+[33m43% [14 python-idna 0 B/32.4 kB 0%] [Waiting for headers][0m[33m                                                         44% [Waiting for headers][0m                         Get:15 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 python-ipaddress all 1.0.17-1 [18.2 kB]
+[33m44% [15 python-ipaddress 0 B/18.2 kB 0%] [Waiting for headers][0m[33m                                                              45% [Waiting for headers][0m                         Get:16 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 python-six all 1.11.0-2 [11.3 kB]
+[33m45% [16 python-six 0 B/11.3 kB 0%] [Waiting for headers][0m[33m                                                        46% [Waiting for headers][0m                         Get:17 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python-cryptography amd64 2.1.4-1ubuntu1.3 [221 kB]
+[33m46% [17 python-cryptography 0 B/221 kB 0%] [Waiting for headers][0m[33m                                                                48% [Waiting for headers][0m                         Get:18 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 python-pyasn1 all 0.4.2-3 [46.7 kB]
+[33m48% [18 python-pyasn1 0 B/46.7 kB 0%] [Waiting for headers][0m[33m                                                           49% [Waiting for headers][0m                         Get:19 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python-paramiko all 2.0.0-1ubuntu1.2 [110 kB]
+[33m49% [19 python-paramiko 0 B/110 kB 0%] [Waiting for headers][0m[33m                                                            51% [Waiting for headers][0m                         Get:20 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 python-httplib2 all 0.9.2+dfsg-1ubuntu0.1 [34.7 kB]
+[33m51% [20 python-httplib2 0 B/34.7 kB 0%] [Waiting for headers][0m[33m                                                             52% [Waiting for headers][0m                         Get:21 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 python-crypto amd64 2.6.1-8ubuntu2 [244 kB]
+[33m52% [21 python-crypto 0 B/244 kB 0%] [Waiting for headers][0m[33m                                                          55% [Waiting for headers][0m                         Get:22 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 python-pkg-resources all 39.0.1-2 [128 kB]
+[33m55% [22 python-pkg-resources 0 B/128 kB 0%] [Waiting for headers][0m[33m                                                                 56% [Waiting for headers][0m                         Get:23 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/main amd64 python-setuptools all 39.0.1-2 [329 kB]
+[33m56% [23 python-setuptools 0 B/329 kB 0%] [Waiting for headers][0m[33m                                                              60% [Waiting for headers][0m                         Get:24 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 sshpass amd64 1.06-1 [10.5 kB]
+[33m60% [24 sshpass 0 B/10.5 kB 0%] [Waiting for headers][0m[33m                                                     61% [Waiting for headers][0m                         Get:25 http://ppa.launchpad.net/ansible/ansible/ubuntu bionic/main amd64 ansible all 2.8.5-1ppa~bionic [5153 kB]
+[33m61% [25 ansible 14.2 kB/5153 kB 0%][0m[33m                                   63% [25 ansible 311 kB/5153 kB 6%][0m[33m76% [25 ansible 2111 kB/5153 kB 41%][0m[33m                                    100% [Working][0m              Fetched 10.7 MB in 2s (6435 kB/s)
+
+7[0;23r8[1ASelecting previously unselected package libpython2.7-minimal:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 115315 files and directories currently installed.)
+Preparing to unpack .../0-libpython2.7-minimal_2.7.15-4ubuntu4~18.04.1_amd64.deb ...
+7[24;0f[42m[30mProgress: [  0%][49m[39m [..........................................................] 8Unpacking libpython2.7-minimal:amd64 (2.7.15-4ubuntu4~18.04.1) ...
+7[24;0f[42m[30mProgress: [  2%][49m[39m [..........................................................] 87[24;0f[42m[30mProgress: [  2%][49m[39m [#.........................................................] 8Selecting previously unselected package python2.7-minimal.
+Preparing to unpack .../1-python2.7-minimal_2.7.15-4ubuntu4~18.04.1_amd64.deb ...
+7[24;0f[42m[30mProgress: [  3%][49m[39m [#.........................................................] 8Unpacking python2.7-minimal (2.7.15-4ubuntu4~18.04.1) ...
+7[24;0f[42m[30mProgress: [  5%][49m[39m [##........................................................] 8Selecting previously unselected package python-minimal.
+Preparing to unpack .../2-python-minimal_2.7.15~rc1-1_amd64.deb ...
+7[24;0f[42m[30mProgress: [  6%][49m[39m [###.......................................................] 8Unpacking python-minimal (2.7.15~rc1-1) ...
+7[24;0f[42m[30mProgress: [  6%][49m[39m [###.......................................................] 87[24;0f[42m[30mProgress: [  7%][49m[39m [####......................................................] 8Selecting previously unselected package libpython2.7-stdlib:amd64.
+Preparing to unpack .../3-libpython2.7-stdlib_2.7.15-4ubuntu4~18.04.1_amd64.deb ...
+Unpacking libpython2.7-stdlib:amd64 (2.7.15-4ubuntu4~18.04.1) ...
+7[24;0f[42m[30mProgress: [  9%][49m[39m [#####.....................................................] 87[24;0f[42m[30mProgress: [ 10%][49m[39m [#####.....................................................] 8Selecting previously unselected package python2.7.
+Preparing to unpack .../4-python2.7_2.7.15-4ubuntu4~18.04.1_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 10%][49m[39m [#####.....................................................] 8Unpacking python2.7 (2.7.15-4ubuntu4~18.04.1) ...
+7[24;0f[42m[30mProgress: [ 11%][49m[39m [######....................................................] 8Selecting previously unselected package libpython-stdlib:amd64.
+Preparing to unpack .../5-libpython-stdlib_2.7.15~rc1-1_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 13%][49m[39m [#######...................................................] 8Unpacking libpython-stdlib:amd64 (2.7.15~rc1-1) ...
+7[24;0f[42m[30mProgress: [ 13%][49m[39m [#######...................................................] 87[24;0f[42m[30mProgress: [ 14%][49m[39m [########..................................................] 8Setting up libpython2.7-minimal:amd64 (2.7.15-4ubuntu4~18.04.1) ...
+7[24;0f[42m[30mProgress: [ 15%][49m[39m [########..................................................] 8Setting up python2.7-minimal (2.7.15-4ubuntu4~18.04.1) ...
+7[24;0f[42m[30mProgress: [ 17%][49m[39m [#########.................................................] 8Linking and byte-compiling packages for runtime python2.7...
+7[24;0f[42m[30mProgress: [ 17%][49m[39m [##########................................................] 8Setting up python-minimal (2.7.15~rc1-1) ...
+7[24;0f[42m[30mProgress: [ 18%][49m[39m [##########................................................] 87[24;0f[42m[30mProgress: [ 19%][49m[39m [###########...............................................] 8Selecting previously unselected package python.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 116063 files and directories currently installed.)
+Preparing to unpack .../00-python_2.7.15~rc1-1_amd64.deb ...
+Unpacking python (2.7.15~rc1-1) ...
+7[24;0f[42m[30mProgress: [ 21%][49m[39m [###########...............................................] 87[24;0f[42m[30mProgress: [ 21%][49m[39m [############..............................................] 8Selecting previously unselected package python-markupsafe.
+Preparing to unpack .../01-python-markupsafe_1.0-1build1_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 22%][49m[39m [############..............................................] 8Unpacking python-markupsafe (1.0-1build1) ...
+7[24;0f[42m[30mProgress: [ 23%][49m[39m [#############.............................................] 8Selecting previously unselected package python-jinja2.
+Preparing to unpack .../02-python-jinja2_2.10-1ubuntu0.18.04.1_all.deb ...
+7[24;0f[42m[30mProgress: [ 25%][49m[39m [##############............................................] 8Unpacking python-jinja2 (2.10-1ubuntu0.18.04.1) ...
+7[24;0f[42m[30mProgress: [ 25%][49m[39m [##############............................................] 87[24;0f[42m[30mProgress: [ 26%][49m[39m [###############...........................................] 8Selecting previously unselected package python-yaml.
+Preparing to unpack .../03-python-yaml_3.12-1build2_amd64.deb ...
+Unpacking python-yaml (3.12-1build2) ...
+7[24;0f[42m[30mProgress: [ 28%][49m[39m [################..........................................] 87[24;0f[42m[30mProgress: [ 29%][49m[39m [################..........................................] 8Selecting previously unselected package python-asn1crypto.
+Preparing to unpack .../04-python-asn1crypto_0.24.0-1_all.deb ...
+7[24;0f[42m[30mProgress: [ 29%][49m[39m [#################.........................................] 8Unpacking python-asn1crypto (0.24.0-1) ...
+7[24;0f[42m[30mProgress: [ 30%][49m[39m [#################.........................................] 8Selecting previously unselected package python-cffi-backend.
+Preparing to unpack .../05-python-cffi-backend_1.11.5-1_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 32%][49m[39m [##################........................................] 8Unpacking python-cffi-backend (1.11.5-1) ...
+7[24;0f[42m[30mProgress: [ 33%][49m[39m [##################........................................] 87[24;0f[42m[30mProgress: [ 33%][49m[39m [###################.......................................] 8Selecting previously unselected package python-enum34.
+Preparing to unpack .../06-python-enum34_1.1.6-2_all.deb ...
+7[24;0f[42m[30mProgress: [ 34%][49m[39m [###################.......................................] 8Unpacking python-enum34 (1.1.6-2) ...
+7[24;0f[42m[30mProgress: [ 36%][49m[39m [####################......................................] 8Selecting previously unselected package python-idna.
+Preparing to unpack .../07-python-idna_2.6-1_all.deb ...
+7[24;0f[42m[30mProgress: [ 37%][49m[39m [#####################.....................................] 8Unpacking python-idna (2.6-1) ...
+7[24;0f[42m[30mProgress: [ 37%][49m[39m [#####################.....................................] 87[24;0f[42m[30mProgress: [ 38%][49m[39m [######################....................................] 8Selecting previously unselected package python-ipaddress.
+Preparing to unpack .../08-python-ipaddress_1.0.17-1_all.deb ...
+Unpacking python-ipaddress (1.0.17-1) ...
+7[24;0f[42m[30mProgress: [ 40%][49m[39m [#######################...................................] 87[24;0f[42m[30mProgress: [ 40%][49m[39m [#######################...................................] 8Selecting previously unselected package python-six.
+Preparing to unpack .../09-python-six_1.11.0-2_all.deb ...
+7[24;0f[42m[30mProgress: [ 41%][49m[39m [#######################...................................] 8Unpacking python-six (1.11.0-2) ...
+7[24;0f[42m[30mProgress: [ 42%][49m[39m [########################..................................] 8Selecting previously unselected package python-cryptography.
+Preparing to unpack .../10-python-cryptography_2.1.4-1ubuntu1.3_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 44%][49m[39m [#########################.................................] 8Unpacking python-cryptography (2.1.4-1ubuntu1.3) ...
+7[24;0f[42m[30mProgress: [ 44%][49m[39m [#########################.................................] 87[24;0f[42m[30mProgress: [ 45%][49m[39m [##########################................................] 8Selecting previously unselected package python-pyasn1.
+Preparing to unpack .../11-python-pyasn1_0.4.2-3_all.deb ...
+7[24;0f[42m[30mProgress: [ 46%][49m[39m [##########################................................] 8Unpacking python-pyasn1 (0.4.2-3) ...
+7[24;0f[42m[30mProgress: [ 48%][49m[39m [###########################...............................] 8Selecting previously unselected package python-paramiko.
+Preparing to unpack .../12-python-paramiko_2.0.0-1ubuntu1.2_all.deb ...
+7[24;0f[42m[30mProgress: [ 48%][49m[39m [############################..............................] 8Unpacking python-paramiko (2.0.0-1ubuntu1.2) ...
+7[24;0f[42m[30mProgress: [ 49%][49m[39m [############################..............................] 87[24;0f[42m[30mProgress: [ 50%][49m[39m [#############################.............................] 8Selecting previously unselected package python-httplib2.
+Preparing to unpack .../13-python-httplib2_0.9.2+dfsg-1ubuntu0.1_all.deb ...
+Unpacking python-httplib2 (0.9.2+dfsg-1ubuntu0.1) ...
+7[24;0f[42m[30mProgress: [ 52%][49m[39m [#############################.............................] 87[24;0f[42m[30mProgress: [ 52%][49m[39m [##############################............................] 8Selecting previously unselected package python-crypto.
+Preparing to unpack .../14-python-crypto_2.6.1-8ubuntu2_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 53%][49m[39m [##############################............................] 8Unpacking python-crypto (2.6.1-8ubuntu2) ...
+7[24;0f[42m[30mProgress: [ 55%][49m[39m [###############################...........................] 8Selecting previously unselected package python-pkg-resources.
+Preparing to unpack .../15-python-pkg-resources_39.0.1-2_all.deb ...
+7[24;0f[42m[30mProgress: [ 56%][49m[39m [################################..........................] 8Unpacking python-pkg-resources (39.0.1-2) ...
+7[24;0f[42m[30mProgress: [ 56%][49m[39m [################################..........................] 87[24;0f[42m[30mProgress: [ 57%][49m[39m [#################################.........................] 8Selecting previously unselected package python-setuptools.
+Preparing to unpack .../16-python-setuptools_39.0.1-2_all.deb ...
+Unpacking python-setuptools (39.0.1-2) ...
+7[24;0f[42m[30mProgress: [ 59%][49m[39m [##################################........................] 87[24;0f[42m[30mProgress: [ 60%][49m[39m [##################################........................] 8Selecting previously unselected package sshpass.
+Preparing to unpack .../17-sshpass_1.06-1_amd64.deb ...
+7[24;0f[42m[30mProgress: [ 60%][49m[39m [##################################........................] 8Unpacking sshpass (1.06-1) ...
+7[24;0f[42m[30mProgress: [ 61%][49m[39m [###################################.......................] 8Selecting previously unselected package ansible.
+Preparing to unpack .../18-ansible_2.8.5-1ppa~bionic_all.deb ...
+7[24;0f[42m[30mProgress: [ 63%][49m[39m [####################################......................] 8Unpacking ansible (2.8.5-1ppa~bionic) ...
+7[24;0f[42m[30mProgress: [ 63%][49m[39m [####################################......................] 87[24;0f[42m[30mProgress: [ 64%][49m[39m [#####################################.....................] 8Processing triggers for mime-support (3.60ubuntu1) ...
+Setting up sshpass (1.06-1) ...
+7[24;0f[42m[30mProgress: [ 65%][49m[39m [#####################################.....................] 8Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Setting up libpython2.7-stdlib:amd64 (2.7.15-4ubuntu4~18.04.1) ...
+7[24;0f[42m[30mProgress: [ 67%][49m[39m [######################################....................] 87[24;0f[42m[30mProgress: [ 67%][49m[39m [#######################################...................] 8Setting up python2.7 (2.7.15-4ubuntu4~18.04.1) ...
+7[24;0f[42m[30mProgress: [ 68%][49m[39m [#######################################...................] 8
+7[0;49r8[1A7[50;0f[42m[30mProgress: [ 68%][49m[39m [####################################################################################################################......................................................] 87[50;0f[42m[30mProgress: [ 69%][49m[39m [#####################################################################################################################.....................................................] 8Setting up libpython-stdlib:amd64 (2.7.15~rc1-1) ...
+7[50;0f[42m[30mProgress: [ 71%][49m[39m [########################################################################################################################..................................................] 8Setting up python (2.7.15~rc1-1) ...
+7[50;0f[42m[30mProgress: [ 71%][49m[39m [#########################################################################################################################.................................................] 87[50;0f[42m[30mProgress: [ 72%][49m[39m [##########################################################################################################################................................................] 8Setting up python-idna (2.6-1) ...
+7[50;0f[42m[30mProgress: [ 73%][49m[39m [############################################################################################################################..............................................] 8Setting up python-yaml (3.12-1build2) ...
+7[50;0f[42m[30mProgress: [ 75%][49m[39m [##############################################################################################################################............................................] 87[50;0f[42m[30mProgress: [ 75%][49m[39m [################################################################################################################################..........................................] 8Setting up python-asn1crypto (0.24.0-1) ...
+7[50;0f[42m[30mProgress: [ 76%][49m[39m [#################################################################################################################################.........................................] 8Setting up python-crypto (2.6.1-8ubuntu2) ...
+7[50;0f[42m[30mProgress: [ 78%][49m[39m [####################################################################################################################################......................................] 87[50;0f[42m[30mProgress: [ 79%][49m[39m [#####################################################################################################################################.....................................] 8Setting up python-pyasn1 (0.4.2-3) ...
+7[50;0f[42m[30mProgress: [ 79%][49m[39m [######################################################################################################################################....................................] 87[50;0f[42m[30mProgress: [ 80%][49m[39m [########################################################################################################################################..................................] 8Setting up python-pkg-resources (39.0.1-2) ...
+7[50;0f[42m[30mProgress: [ 82%][49m[39m [##########################################################################################################################################................................] 8Setting up python-markupsafe (1.0-1build1) ...
+7[50;0f[42m[30mProgress: [ 83%][49m[39m [############################################################################################################################################..............................] 87[50;0f[42m[30mProgress: [ 83%][49m[39m [#############################################################################################################################################.............................] 8Setting up python-httplib2 (0.9.2+dfsg-1ubuntu0.1) ...
+7[50;0f[42m[30mProgress: [ 84%][49m[39m [###############################################################################################################################################...........................] 8Setting up python-cffi-backend (1.11.5-1) ...
+7[50;0f[42m[30mProgress: [ 86%][49m[39m [#################################################################################################################################################.........................] 87[50;0f[42m[30mProgress: [ 87%][49m[39m [###################################################################################################################################################.......................] 8Setting up python-six (1.11.0-2) ...
+7[50;0f[42m[30mProgress: [ 87%][49m[39m [####################################################################################################################################################......................] 87[50;0f[42m[30mProgress: [ 88%][49m[39m [#####################################################################################################################################################.....................] 8Setting up python-enum34 (1.1.6-2) ...
+7[50;0f[42m[30mProgress: [ 90%][49m[39m [########################################################################################################################################################..................] 8Setting up python-ipaddress (1.0.17-1) ...
+7[50;0f[42m[30mProgress: [ 90%][49m[39m [#########################################################################################################################################################.................] 87[50;0f[42m[30mProgress: [ 91%][49m[39m [###########################################################################################################################################################...............] 8Setting up python-setuptools (39.0.1-2) ...
+7[50;0f[42m[30mProgress: [ 92%][49m[39m [############################################################################################################################################################..............] 8Setting up python-jinja2 (2.10-1ubuntu0.18.04.1) ...
+7[50;0f[42m[30mProgress: [ 94%][49m[39m [###############################################################################################################################################################...........] 87[50;0f[42m[30mProgress: [ 94%][49m[39m [################################################################################################################################################################..........] 8Setting up python-cryptography (2.1.4-1ubuntu1.3) ...
+7[50;0f[42m[30mProgress: [ 95%][49m[39m [#################################################################################################################################################################.........] 87[50;0f[42m[30mProgress: [ 96%][49m[39m [###################################################################################################################################################################.......] 8Setting up python-paramiko (2.0.0-1ubuntu1.2) ...
+7[50;0f[42m[30mProgress: [ 98%][49m[39m [#####################################################################################################################################################################.....] 8Setting up ansible (2.8.5-1ppa~bionic) ...
+7[50;0f[42m[30mProgress: [ 98%][49m[39m [#######################################################################################################################################################################...] 87[50;0f[42m[30mProgress: [ 99%][49m[39m [########################################################################################################################################################################..] 8
+7[0;50r8[1A[J]0;root@ip-172-31-94-28: /opt/ansibleroot@ip-172-31-94-28:/opt/ansible# ansible --version
+ansible 2.8.5
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/root/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 2.7.15+ (default, Jul  9 2019, 16:51:35) [GCC 7.4.0]
+]0;root@ip-172-31-94-28: /opt/ansibleroot@ip-172-31-94-28:/opt/ansible# 
+]0;root@ip-172-31-94-28: /opt/ansibleroot@ip-172-31-94-28:/opt/ansible# cd .ssf[Kh
+bash: cd: .ssh: No such file or directory
+]0;root@ip-172-31-94-28: /opt/ansibleroot@ip-172-31-94-28:/opt/ansible# d [K[Kcd ~
+]0;root@ip-172-31-94-28: ~root@ip-172-31-94-28:~# cd .ssh
+]0;root@ip-172-31-94-28: ~/.sshroot@ip-172-31-94-28:~/.ssh# ls -latr
+total 12
+-rw------- 1 root root  550 Aug 13 04:08 authorized_keys
+drwx------ 2 root root 4096 Aug 13 04:08 [0m[01;34m.[0m
+drwx------ 5 root root 4096 Sep 20 02:03 [01;34m..[0m
+]0;root@ip-172-31-94-28: ~/.sshroot@ip-172-31-94-28:~/.ssh# ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /root/.ssh/id_rsa.
+Your public key has been saved in /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:u0IXq7WuTikx9k+9d9eiWT+3kPgqvB10qbRzb5/CcAM root@ip-172-31-94-28
+The key's randomart image is:
++---[RSA 2048]----+
+|                 |
+|                 |
+|                 |
+|        .  E  .  |
+|    +   So o.o   |
+|   . +..+oo.=o.  |
+|    ..+++..*++o .|
+|     ooo.+..*==+=|
+|     .o++.++++o*B|
++----[SHA256]-----+
+]0;root@ip-172-31-94-28: ~/.sshroot@ip-172-31-94-28:~/.ssh# ls -latr
+total 20
+-rw------- 1 root root  550 Aug 13 04:08 authorized_keys
+drwx------ 5 root root 4096 Sep 20 02:03 [0m[01;34m..[0m
+-rw-r--r-- 1 root root  402 Sep 20 02:37 id_rsa.pub
+-rw------- 1 root root 1675 Sep 20 02:37 id_rsa
+drwx------ 2 root root 4096 Sep 20 02:37 [01;34m.[0m
+]0;root@ip-172-31-94-28: ~/.sshroot@ip-172-31-94-28:~/.ssh# cat id_rsa.pub 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCkhfqHngIdhNHKEKCZGXjndldClFj/Wi14ec5OAWY17rWWZByBcxx8BIdRQxX9zRdksZdrulr0e2Ou/EKK+ZH0DjHvvTj7uF0VUiv/ufJVmyhxSSLOYA2raN+SBmMFdzEQzhEu+4j4BmzyB1Nex1owvlhcWIxSlng50/dxMJPPBhbwa2PqHmF8KqHxkQOw62tUbKBZsNzi1W55LS91R/+nO3gDGR3Au0ZLT+IqTQF68ekIEq77RpqJNKySEkSo7rlyIA8vUx9Rd9ZWKOx8fqOTRoEdUtgjSBhBEbFPjalllJ2wEi0LM8rJLLnSCjyRuYUuDc5nEq9joboWVciGs+dN root@ip-172-31-94-28
+]0;root@ip-172-31-94-28: ~/.sshroot@ip-172-31-94-28:~/.ssh# ping 3.80.103.94
+PING 3.80.103.94 (3.80.103.94) 56(84) bytes of data.
+
+^C
+--- 3.80.103.94 ping statistics ---
+11 packets transmitted, 0 received, 100% packet loss, time 10230ms
+
+]0;root@ip-172-31-94-28: ~/.sshroot@ip-172-31-94-28:~/.ssh# ssh 3.80.103.94
+The authenticity of host '3.80.103.94 (3.80.103.94)' can't be established.
+ECDSA key fingerprint is SHA256:pCDb3yNmR03JE1UKFeR4iM3XtSKP3ZU2OtrPYqOT2WI.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '3.80.103.94' (ECDSA) to the list of known hosts.
+root@3.80.103.94: Permission denied (publickey).
+]0;root@ip-172-31-94-28: ~/.sshroot@ip-172-31-94-28:~/.ssh# ssh 3.80.103.94
+Welcome to Ubuntu 16.04.6 LTS (GNU/Linux 4.4.0-1092-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+38 packages can be updated.
+0 updates are security updates.
+
+New release '18.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*** System restart required ***
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+]0;root@ip-172-31-18-71: ~root@ip-172-31-18-71:~# exit
+logout
+Connection to 3.80.103.94 closed.
+]0;root@ip-172-31-94-28: ~/.sshroot@ip-172-31-94-28:~/.ssh# pwd
+/root/.ssh
+]0;root@ip-172-31-94-28: ~/.sshroot@ip-172-31-94-28:~/.ssh# cd /etc/ansible/ho[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcat /etc/ansible/hosts 
+# This is the default ansible 'hosts' file.
+#
+# It should live in /etc/ansible/hosts
+#
+#   - Comments begin with the '#' character
+#   - Blank lines are ignored
+#   - Groups of hosts are delimited by [header] elements
+#   - You can enter hostnames or ip addresses
+#   - A hostname/ip can be a member of multiple groups
+
+# Ex 1: Ungrouped hosts, specify before any group headers.
+
+## green.example.com
+## blue.example.com
+## 192.168.100.1
+## 192.168.100.10
+
+# Ex 2: A collection of hosts belonging to the 'webservers' group
+
+## [webservers]
+## alpha.example.org
+## beta.example.org
+## 192.168.1.100
+## 192.168.1.110
+
+# If you have multiple hosts following a pattern you can specify
+# them like this:
+
+## www[001:006].example.com
+
+# Ex 3: A collection of database servers in the 'dbservers' group
+
+## [dbservers]
+## 
+## db01.intranet.mydomai

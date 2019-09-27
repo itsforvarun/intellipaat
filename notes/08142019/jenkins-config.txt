@@ -1,0 +1,243 @@
+Script started on 2019-08-15 02:36:03+0000
+]0;root@ip-172-31-94-28: /opt/notes/08142019root@ip-172-31-94-28:/opt/notes/08142019# cd ../..
+]0;root@ip-172-31-94-28: /optroot@ip-172-31-94-28:/opt# ls
+[0m[01;34mgit[0m  install-configure-tomcat  [01;34mnotes[0m  [01;34mtomcat[0m
+]0;root@ip-172-31-94-28: /optroot@ip-172-31-94-28:/opt# cd git/
+]0;root@ip-172-31-94-28: /opt/gitroot@ip-172-31-94-28:/opt/git# ls
+[0m[01;34mjava_code_0001[0m
+]0;root@ip-172-31-94-28: /opt/gitroot@ip-172-31-94-28:/opt/git# cd java_code_0001/
+]0;root@ip-172-31-94-28: /opt/git/java_code_0001root@ip-172-31-94-28:/opt/git/java_code_0001# ls
+README.md  [0m[01;32mmvnw[0m  mvnw.cmd  pom.xml  [01;34msrc[0m  [01;34mtarget[0m
+]0;root@ip-172-31-94-28: /opt/git/java_code_0001root@ip-172-31-94-28:/opt/git/java_code_0001# cd ..
+]0;root@ip-172-31-94-28: /opt/gitroot@ip-172-31-94-28:/opt/git# mkdir intellipat-notes
+]0;root@ip-172-31-94-28: /opt/gitroot@ip-172-31-94-28:/opt/git# git init
+Initialized empty Git repository in /opt/git/.git/
+]0;root@ip-172-31-94-28: /opt/gitroot@ip-172-31-94-28:/opt/git# ls
+[0m[01;34mintellipat-notes[0m  [01;34mjava_code_0001[0m
+]0;root@ip-172-31-94-28: /opt/gitroot@ip-172-31-94-28:/opt/git# cd intellipat-notes/
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notesroot@ip-172-31-94-28:/opt/git/intellipat-notes# ls
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notesroot@ip-172-31-94-28:/opt/git/intellipat-notes# git init 
+Initialized empty Git repository in /opt/git/intellipat-notes/.git/
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notesroot@ip-172-31-94-28:/opt/git/intellipat-notes# ls
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notesroot@ip-172-31-94-28:/opt/git/intellipat-notes# ls -latr
+total 12
+drwxr-xr-x 5 root root 4096 Aug 15 02:44 [0m[01;34m..[0m
+drwxr-xr-x 7 root root 4096 Aug 15 02:44 [01;34m.git[0m
+drwxr-xr-x 3 root root 4096 Aug 15 02:44 [01;34m.[0m
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notesroot@ip-172-31-94-28:/opt/git/intellipat-notes# mkdir notes
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notesroot@ip-172-31-94-28:/opt/git/intellipat-notes# cd notes
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/notesroot@ip-172-31-94-28:/opt/git/intellipat-notes/notes# git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/notesroot@ip-172-31-94-28:/opt/git/intellipat-notes/notes# cp -pv /opt/notes/0811[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls -l /opt/notes
+total 12
+drwxr-xr-x 2 root root 4096 Aug 13 05:48 [0m[01;34m08122019[0m
+drwxr-xr-x 2 root root 4096 Aug 14 02:42 [01;34m08132019[0m
+drwxr-xr-x 2 root root 4096 Aug 15 02:36 [01;34m08142019[0m
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/notesroot@ip-172-31-94-28:/opt/git/intellipat-notes/notes# cp -pv /opt/notes/08122019//* .
+'/opt/notes/08122019/git-installation-steps' -> './git-installation-steps'
+'/opt/notes/08122019/install-java.txt' -> './install-java.txt'
+'/opt/notes/08122019/install-maven' -> './install-maven'
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/notesroot@ip-172-31-94-28:/opt/git/intellipat-notes/notes# ls -altr
+total 268
+-rw-r--r-- 1 root root 201851 Aug 13 05:39 install-java.txt
+-rw-r--r-- 1 root root  23008 Aug 13 05:48 git-installation-steps
+-rw-r--r-- 1 root root  33125 Aug 13 05:51 install-maven
+drwxr-xr-x 4 root root   4096 Aug 15 02:45 [0m[01;34m..[0m
+drwxr-xr-x 2 root root   4096 Aug 15 02:46 [01;34m.[0m
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/notesroot@ip-172-31-94-28:/opt/git/intellipat-notes/notes# git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m./[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/notesroot@ip-172-31-94-28:/opt/git/intellipat-notes/notes# cd ..
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notesroot@ip-172-31-94-28:/opt/git/intellipat-notes# ls
+[0m[01;34mnotes[0m
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notesroot@ip-172-31-94-28:/opt/git/intellipat-notes# rm -rf *
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notesroot@ip-172-31-94-28:/opt/git/intellipat-notes# ls
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notesroot@ip-172-31-94-28:/opt/git/intellipat-notes# cd ..
+]0;root@ip-172-31-94-28: /opt/gitroot@ip-172-31-94-28:/opt/git# ls -altr
+total 20
+drwxr-xr-x 5 root root 4096 Aug 13 05:46 [0m[01;34mjava_code_0001[0m
+drwxr-xr-x 5 root root 4096 Aug 13 05:57 [01;34m..[0m
+drwxr-xr-x 5 root root 4096 Aug 15 02:44 [01;34m.[0m
+drwxr-xr-x 7 root root 4096 Aug 15 02:44 [01;34m.git[0m
+drwxr-xr-x 3 root root 4096 Aug 15 02:48 [01;34mintellipat-notes[0m
+]0;root@ip-172-31-94-28: /opt/gitroot@ip-172-31-94-28:/opt/git# rm -rf intellipat-notes/
+]0;root@ip-172-31-94-28: /opt/gitroot@ip-172-31-94-28:/opt/git# ls -latr
+total 16
+drwxr-xr-x 5 root root 4096 Aug 13 05:46 [0m[01;34mjava_code_0001[0m
+drwxr-xr-x 5 root root 4096 Aug 13 05:57 [01;34m..[0m
+drwxr-xr-x 7 root root 4096 Aug 15 02:44 [01;34m.git[0m
+drwxr-xr-x 4 root root 4096 Aug 15 02:48 [01;34m.[0m
+]0;root@ip-172-31-94-28: /opt/gitroot@ip-172-31-94-28:/opt/git# rm -rf .
+./    ../   .git/ 
+]0;root@ip-172-31-94-28: /opt/gitroot@ip-172-31-94-28:/opt/git# rm -rf .git/
+]0;root@ip-172-31-94-28: /opt/gitroot@ip-172-31-94-28:/opt/git# ls -altr
+total 12
+drwxr-xr-x 5 root root 4096 Aug 13 05:46 [0m[01;34mjava_code_0001[0m
+drwxr-xr-x 5 root root 4096 Aug 13 05:57 [01;34m..[0m
+drwxr-xr-x 3 root root 4096 Aug 15 02:48 [01;34m.[0m
+]0;root@ip-172-31-94-28: /opt/gitroot@ip-172-31-94-28:/opt/git# cd intellipat-notes[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmkdir intellipat-notes
+]0;root@ip-172-31-94-28: /opt/gitroot@ip-172-31-94-28:/opt/git# cd intellipat-notes/
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notesroot@ip-172-31-94-28:/opt/git/intellipat-notes# clo[K[K[Kgit clone https://github.com/itsfforvarun/intellipaat.git
+Cloning into 'intellipaat'...
+remote: Enumerating objects: 6, done.[K
+remote: Counting objects:  16% (1/6)[Kremote: Counting objects:  33% (2/6)[Kremote: Counting objects:  50% (3/6)[Kremote: Counting objects:  66% (4/6)[Kremote: Counting objects:  83% (5/6)[Kremote: Counting objects: 100% (6/6)[Kremote: Counting objects: 100% (6/6), done.[K
+remote: Compressing objects:  25% (1/4)[Kremote: Compressing objects:  50% (2/4)[Kremote: Compressing objects:  75% (3/4)[Kremote: Compressing objects: 100% (4/4)[Kremote: Compressing objects: 100% (4/4), done.[K
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0[K
+Unpacking objects:  16% (1/6)   Unpacking objects:  33% (2/6)   Unpacking objects:  50% (3/6)   Unpacking objects:  66% (4/6)   Unpacking objects:  83% (5/6)   Unpacking objects: 100% (6/6)   Unpacking objects: 100% (6/6), done.
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notesroot@ip-172-31-94-28:/opt/git/intellipat-notes# ls -latr
+total 12
+drwxr-xr-x 4 root root 4096 Aug 15 02:49 [0m[01;34m..[0m
+drwxr-xr-x 3 root root 4096 Aug 15 02:49 [01;34m.[0m
+drwxr-xr-x 3 root root 4096 Aug 15 02:49 [01;34mintellipaat[0m
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notesroot@ip-172-31-94-28:/opt/git/intellipat-notes# cd intellipaat/
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaatroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat# ls
+DevopsDefault-07292019.pem  README.md
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaatroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat# mkdir notes
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaatroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat# cd notes
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notesroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes# git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notesroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes# git branch -a
+[?1h=* [32mmaster[m[m
+  [31mremotes/origin/HEAD[m -> origin/master[m
+  [31mremotes/origin/master[m[m
+[K[?1l>]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notesroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes# git branch 081 22019
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notesroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes# git branch 081222019[A]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notesroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes# [C[C[C[C[C[C[C[C[C[C[C[1P-a
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?1h=  08122019[m[m
+* [32mmaster[m[m
+  [31mremotes/origin/HEAD[m -> origin/master[m
+  [31mremotes/origin/master[m[m
+[K[?1l>]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notesroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes# git checkout 0 8122019
+Switched to branch '08122019'
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notesroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes# git branch -a
+[?1h=* [32m08122019[m[m
+  master[m[m
+  [31mremotes/origin/HEAD[m -> origin/master[m
+  [31mremotes/origin/master[m[m
+[K[?1l>]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notesroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes# ls
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notesroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes# mkdir 08122019 [A
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notesroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes# cd 08122019/
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notes/08122019root@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes/08122019# cp /o pt/notes/08122019/* .
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notes/08122019root@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes/08122019# ls
+git-installation-steps  install-java.txt  install-maven
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notes/08122019root@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes/08122019# git s tatus
+On branch 08122019
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m../[m
+
+nothing added to commit but untracked files present (use "git add" to track)
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notes/08122019root@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes/08122019# git a dd .
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notes/08122019root@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes/08122019# git s tatus
+On branch 08122019
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mnew file:   git-installation-steps[m
+	[32mnew file:   install-java.txt[m
+	[32mnew file:   install-maven[m
+
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notes/08122019root@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes/08122019# git c ommit -m "notes for 08122019"
+[08122019 4d4a911] notes for 08122019
+ 3 files changed, 2471 insertions(+)
+ create mode 100644 notes/08122019/git-installation-steps
+ create mode 100644 notes/08122019/install-java.txt
+ create mode 100644 notes/08122019/install-maven
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notes/08122019root@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes/08122019# git s tatus
+On branch 08122019
+nothing to commit, working tree clean
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notes/08122019root@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes/08122019# git p ush -u origin 08122019
+Username for 'https://github.com': itsforvarun
+Password for 'https://itsforvarun@github.com': 
+Counting objects: 7, done.
+Compressing objects:  16% (1/6)   Compressing objects:  33% (2/6)   Compressing objects:  50% (3/6)   Compressing objects:  66% (4/6)   Compressing objects:  83% (5/6)   Compressing objects: 100% (6/6)   Compressing objects: 100% (6/6), done.
+Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 36.15 KiB | 5.16 MiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+remote: 
+remote: Create a pull request for '08122019' on GitHub by visiting:[K
+remote:      https://github.com/itsforvarun/intellipaat/pull/new/08122019[K
+remote: 
+To https://github.com/itsforvarun/intellipaat.git
+ * [new branch]      08122019 -> 08122019
+Branch '08122019' set up to track remote branch '08122019' from 'origin'.
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notes/08122019root@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes/08122019# git b ranch
+[?1h=* [32m08122019[m[m
+  master[m[m
+[K[?1l>]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notes/08122019root@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes/08122019# [K]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notes/08122019root@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes/08122019# git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notes/08122019root@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes/08122019# git checkout master[9Pbranch
+fatal: Unable to read current working directory: No such file or directory
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notes/08122019root@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes/08122019# git merge 08122019
+fatal: Unable to read current working directory: No such file or directory
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notes/08122019root@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes/08122019# git branch
+fatal: Unable to read current working directory: No such file or directory
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notes/08122019root@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes/08122019# ls
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notes/08122019root@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes/08122019# git fetch
+fatal: Unable to read current working directory: No such file or directory
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaat/notes/08122019root@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat/notes/08122019# cd ../..
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaatroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat# ls
+DevopsDefault-07292019.pem  README.md
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaatroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat# git fetch
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaatroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat# git pull
+Already up to date.
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaatroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat# pwd
+/opt/git/intellipat-notes/intellipaat
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaatroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat# cd[K[Kls
+DevopsDefault-07292019.pem  README.md
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaatroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat# git checkout 08122019
+Switched to branch '08122019'
+Your branch is up to date with 'origin/08122019'.
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaatroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat# ls
+DevopsDefault-07292019.pem  README.md  [0m[01;34mnotes[0m
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaatroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat# git merge [K[K[K[K[K[Kcheckout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaatroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat# git merge 08122019
+Updating ce47053..4d4a911
+Fast-forward
+ notes/08122019/git-installation-steps |   64 [32m+++[m
+ notes/08122019/install-java.txt       | 2156 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[m
+ notes/08122019/install-maven          |  251 [32m+++++++++[m
+ 3 files changed, 2471 insertions(+)
+ create mode 100644 notes/08122019/git-installation-steps
+ create mode 100644 notes/08122019/install-java.txt
+ create mode 100644 notes/08122019/install-maven
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaatroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat# git push 
+Username for 'https://github.com': itsforvarun
+Password for 'https://itsforvarun@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/itsforvarun/intellipaat.git
+   ce47053..4d4a911  master -> master
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaatroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat# git branch
+[?1h=  08122019[m[m
+* [32mmaster[m[m
+[K[?1l>]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaatroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat# ls
+DevopsDefault-07292019.pem  README.md  [0m[01;34mnotes[0m
+]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaatroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat# git branch -a
+[?1h=  08122019[m[m
+* [32mmaster[m[m
+  [31mremotes/origin/08122019[m[m
+  [31mremotes/origin/HEAD[m -> origin/master[m
+  [31mremotes/origin/master[m[m
+[K[?1l>]0;root@ip-172-31-94-28: /opt/git/intellipat-notes/intellipaatroot@ip-172-31-94-28:/opt/git/intellipat-notes/intellipaat# exit
+exit
+
+Script done on 2019-08-15 05:06:13+0000

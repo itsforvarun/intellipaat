@@ -1,0 +1,517 @@
+Script started on 2019-08-14 01:38:49+0000
+]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# apt update
+[33m0% [Working][0m            Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+[33m0% [Connecting to security.ubuntu.com (91.189.88.162)][0m                                                      Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+[33m0% [Waiting for headers] [Connecting to security.ubuntu.com (91.189.88.162)][0m                                                                            Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+[33m                                                                            0% [Connecting to security.ubuntu.com (91.189.88.162)][0m[33m0% [1 InRelease gpgv 242 kB] [Connecting to security.ubuntu.com (91.189.88.162)[0m[33m                                                                               0% [Waiting for headers][0m[33m0% [2 InRelease gpgv 88.7 kB] [Waiting for headers][0m                                                   Get:4 http://security.ubuntu.com/ubuntu bionic-security InRelease [88.7 kB]
+[33m0% [2 InRelease gpgv 88.7 kB] [4 InRelease 2587 B/88.7 kB 3%][0m[33m                                                             0% [4 InRelease 11.3 kB/88.7 kB 13%][0m[33m0% [3 InRelease gpgv 74.6 kB] [Waiting for headers] [4 InRelease 11.3 kB/88.7 k[0m                                                                               Get:5 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main amd64 Packages [709 kB]
+[33m0% [3 InRelease gpgv 74.6 kB] [5 Packages 36.0 kB/709 kB 5%] [4 InRelease 14.2 [0m[33m                                                                               0% [3 InRelease gpgv 74.6 kB] [4 InRelease 14.2 kB/88.7 kB 16%][0m[33m0% [5 Packages store 0 B] [3 InRelease gpgv 74.6 kB] [Waiting for headers] [4 I[0m                                                                               Get:6 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/main Translation-en [258 kB]
+[33m0% [5 Packages store 0 B] [3 InRelease gpgv 74.6 kB] [6 Translation-en 25.9 kB/[0m[33m0% [5 Packages store 0 B] [3 InRelease gpgv 74.6 kB] [4 InRelease 14.2 kB/88.7 [0m                                                                               Get:7 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/restricted amd64 Packages [7652 B]
+[33m0% [5 Packages store 0 B] [3 InRelease gpgv 74.6 kB] [7 Packages 0 B/7652 B 0%][0m[33m0% [5 Packages store 0 B] [3 InRelease gpgv 74.6 kB] [4 InRelease 15.6 kB/88.7 [0m                                                                               Get:8 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/restricted Translation-en [3356 B]
+[33m0% [5 Packages store 0 B] [3 InRelease gpgv 74.6 kB] [8 Translation-en 0 B/3356[0m[33m0% [5 Packages store 0 B] [3 InRelease gpgv 74.6 kB] [4 InRelease 15.6 kB/88.7 [0m                                                                               Get:9 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe amd64 Packages [986 kB]
+[33m0% [5 Packages store 0 B] [3 InRelease gpgv 74.6 kB] [9 Packages 0 B/986 kB 0%][0m[33m0% [5 Packages store 0 B] [3 InRelease gpgv 74.6 kB] [4 InRelease 34.4 kB/88.7 [0m                                                                               Get:10 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/universe Translation-en [300 kB]
+[33m0% [5 Packages store 0 B] [3 InRelease gpgv 74.6 kB] [10 Translation-en 0 B/300[0m[33m0% [5 Packages store 0 B] [3 InRelease gpgv 74.6 kB] [4 InRelease 40.2 kB/88.7 [0m                                                                               Get:11 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates/multiverse amd64 Packages [11.9 kB]
+[33m0% [5 Packages store 0 B] [3 InRelease gpgv 74.6 kB] [11 Packages 0 B/11.9 kB 0[0m[33m0% [5 Packages store 0 B] [3 InRelease gpgv 74.6 kB] [4 InRelease 40.2 kB/88.7 [0m[33m                                                                               0% [5 Packages store 0 B] [3 InRelease gpgv 74.6 kB][0m[33m                                                    0% [5 Packages store 0 B][0m[33m0% [5 Packages store 0 B] [4 InRelease gpgv 88.7 kB][0m[33m                                                    0% [4 InRelease gpgv 88.7 kB][0m[33m0% [6 Translation-en store 0 B] [4 InRelease gpgv 88.7 kB][0m[33m                                                          0% [4 InRelease gpgv 88.7 kB][0m[33m0% [7 Packages store 0 B] [4 InRelease gpgv 88.7 kB][0m[33m                                                    0% [4 InRelease gpgv 88.7 kB][0m[33m0% [8 Translation-en store 0 B] [4 InRelease gpgv 88.7 kB][0m[33m                                                          0% [4 InRelease gpgv 88.7 kB][0m[33m0% [9 Packages store 0 B] [4 InRelease gpgv 88.7 kB][0m[33m                                                    75% [9 Packages store 0 B][0m                          Get:12 http://security.ubuntu.com/ubuntu bionic-security/main amd64 Packages [465 kB]
+[33m75% [9 Packages store 0 B] [12 Packages 2687 B/465 kB 1%][0m[33m                                                         78% [12 Packages 99.7 kB/465 kB 21%][0m[33m78% [10 Translation-en store 0 B] [12 Packages 99.7 kB/465 kB 21%][0m[33m                                                                  80% [12 Packages 191 kB/465 kB 41%][0m[33m80% [11 Packages store 0 B] [12 Packages 191 kB/465 kB 41%][0m[33m                                                           80% [12 Packages 197 kB/465 kB 42%][0m[33m                                   86% [Working][0m[33m86% [12 Packages store 0 B][0m                           Get:13 http://security.ubuntu.com/ubuntu bionic-security/universe amd64 Packages [578 kB]
+[33m86% [12 Packages store 0 B] [13 Packages 9927 B/578 kB 2%][0m[33m                                                          88% [13 Packages 60.6 kB/578 kB 10%][0m[33m                                    99% [Working][0m[33m99% [13 Packages store 0 B][0m                           Get:14 http://security.ubuntu.com/ubuntu bionic-security/multiverse amd64 Packages [4004 B]
+[33m99% [13 Packages store 0 B] [14 Packages 0 B/4004 B 0%][0m[33m                                                       100% [13 Packages store 0 B][0m[33m                            100% [Working][0m[33m100% [14 Packages store 0 B][0m[33m                            100% [Working][0m              Fetched 3575 kB in 1s (2974 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 5%Reading package lists... 5%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 50%Reading package lists... 50%Reading package lists... 72%Reading package lists... 72%Reading package lists... 73%Reading package lists... 73%Reading package lists... 73%Reading package lists... 73%Reading package lists... 76%Reading package lists... 77%Reading package lists... 77%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 86%Reading package lists... 86%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 92%Reading package lists... 92%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+16 packages can be upgraded. Run 'apt list --upgradable' to see them.
+]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# java -version
+openjdk version "11.0.4" 2019-07-16
+OpenJDK Runtime Environment (build 11.0.4+11-post-Ubuntu-1ubuntu218.04.3)
+OpenJDK 64-Bit Server VM (build 11.0.4+11-post-Ubuntu-1ubuntu218.04.3, mixed mode, sharing)
+]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# java -version
+openjdk version "11.0.4" 2019-07-16
+OpenJDK Runtime Environment (build 11.0.4+11-post-Ubuntu-1ubuntu218.04.3)
+OpenJDK 64-Bit Server VM (build 11.0.4+11-post-Ubuntu-1ubuntu218.04.3, mixed mode, sharing)
+]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# wget -q -O - https://pkg.jenkins.io/debbian/jenkins.io.key | sudo apt-key add -
+OK
+]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# deb https://pkg.jenkins.io/debian binarry/
+
+Command 'deb' not found, did you mean:
+
+  command 'den' from snap den (1.2.0-0)
+  command 'dub' from snap dub (1.15.0)
+  command 'dex' from deb dex
+  command 'debi' from deb devscripts
+  command 'deb3' from deb quilt
+  command 'edb' from deb edb-debugger
+  command 'derb' from deb icu-devtools
+  command 'dab' from deb bsdgames
+  command 'xdeb' from deb xdeb
+  command 'dep' from deb go-dep
+  command 'dub' from deb dub
+  command 'debc' from deb devscripts
+
+See 'snap info <snapname>' for additional versions.
+
+]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# sudo sh -c 'echo deb http://pkg.jenkinss.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# cat /et//[K[Kc/apt/sources.list
+## Note, this file is written by cloud-init on first boot of an instance
+## modifications made here will not survive a re-bundle.
+## if you wish to make changes you can:
+## a.) add 'apt_preserve_sources_list: true' to /etc/cloud/cloud.cfg
+##     or do the same in user-data
+## b.) add sources in /etc/apt/sources.list.d
+## c.) make changes to template file /etc/cloud/templates/sources.list.tmpl
+
+# See http://help.ubuntu.com/community/UpgradeNotes for how to upgrade to
+# newer versions of the distribution.
+deb http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ bionic main restricted
+# deb-src http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ bionic main restricted
+
+## Major bug fix updates produced after the final release of the
+## distribution.
+deb http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ bionic-updates main restricted
+# deb-src http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ bionic-updates main restricted
+
+## N.B. software from this repository is ENTIRELY UNSUPPORTED by the Ubuntu
+## team. Also, please note that software in universe WILL NOT receive any
+## review or updates from the Ubuntu security team.
+deb http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ bionic universe
+# deb-src http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ bionic universe
+deb http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ bionic-updates universe
+# deb-src http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ bionic-updates universe
+
+## N.B. software from this repository is ENTIRELY UNSUPPORTED by the Ubuntu
+## team, and may not be under a free licence. Please satisfy yourself as to
+## your rights to use the software. Also, please note that software in
+## multiverse WILL NOT receive any review or updates from the Ubuntu
+## security team.
+deb http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ bionic multiverse
+# deb-src http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ bionic multiverse
+deb http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ bionic-updates multiverse
+# deb-src http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ bionic-updates multiverse
+
+## N.B. software from this repository may not have been tested as
+## extensively as that contained in the main release, although it includes
+## newer versions of some applications which may provide useful features.
+## Also, please note that software in backports WILL NOT receive any review
+## or updates from the Ubuntu security team.
+deb http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse
+# deb-src http://us-east-1.ec2.archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse
+
+## Uncomment the following two lines to add software from Canonical's
+## 'partner' repository.
+## This software is not part of Ubuntu, but is offered by Canonical and the
+## respective vendors as a service to Ubuntu users.
+# deb http://archive.canonical.com/ubuntu bionic partner
+# deb-src http://archive.canonical.com/ubuntu bionic partner
+
+deb http://security.ubuntu.com/ubuntu bionic-security main restricted
+# deb-src http://security.ubuntu.com/ubuntu bionic-security main restricted
+deb http://security.ubuntu.com/ubuntu bionic-security universe
+# deb-src http://security.ubuntu.com/ubuntu bionic-security universe
+deb http://security.ubuntu.com/ubuntu bionic-security multiverse
+# deb-src http://security.ubuntu.com/ubuntu bionic-security multiverse
+]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# apt update
+[33m0% [Working][0m            Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic InRelease
+[33m0% [Connecting to security.ubuntu.com (91.189.91.23)][0m                                                     Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
+                                                     Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
+[33m0% [3 InRelease 74.6 kB/74.6 kB 100%] [Waiting for headers][0m[33m                                                           0% [Waiting for headers][0m[33m0% [1 InRelease gpgv 242 kB] [Waiting for headers][0m                                                  Hit:4 http://security.ubuntu.com/ubuntu bionic-security InRelease
+[33m                                                  0% [1 InRelease gpgv 242 kB][0m[33m0% [Connecting to pkg.jenkins.io][0m[33m0% [2 InRelease gpgv 88.7 kB] [Connecting to pkg.jenkins.io][0m                                                            Ign:5 http://pkg.jenkins.io/debian-stable binary/ InRelease
+[33m                                                            0% [2 InRelease gpgv 88.7 kB][0m                             Get:6 http://pkg.jenkins.io/debian-stable binary/ Release [2042 B]
+[33m0% [2 InRelease gpgv 88.7 kB][0m                             Get:7 http://pkg.jenkins.io/debian-stable binary/ Release.gpg [181 B]
+[33m0% [2 InRelease gpgv 88.7 kB][0m[33m                             0% [Working][0m[33m0% [3 InRelease gpgv 74.6 kB][0m[33m                             0% [Working][0m[33m0% [4 InRelease gpgv 88.7 kB][0m[33m                             0% [Working][0m[33m0% [7 Release.gpg gpgv 2042 B][0m[33m                              93% [Working][0m             Get:8 http://pkg.jenkins.io/debian-stable binary/ Packages [15.2 kB]
+[33m99% [8 Packages 14.2 kB/15.2 kB 94%][0m[33m                                    100% [Working][0m[33m100% [8 Packages store 0 B][0m[33m                           100% [Working][0m              Fetched 181 kB in 0s (430 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 5%Reading package lists... 5%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 7%Reading package lists... 50%Reading package lists... 50%Reading package lists... 72%Reading package lists... 72%Reading package lists... 73%Reading package lists... 73%Reading package lists... 73%Reading package lists... 73%Reading package lists... 77%Reading package lists... 77%Reading package lists... 78%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 80%Reading package lists... 86%Reading package lists... 86%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 89%Reading package lists... 92%Reading package lists... 92%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 94%Reading package lists... 97%Reading package lists... 97%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+16 packages can be upgraded. Run 'apt list --upgradable' to see them.
+]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# apt install jenkins
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  daemon
+The following NEW packages will be installed:
+  daemon jenkins
+0 upgraded, 2 newly installed, 0 to remove and 16 not upgraded.
+Need to get 77.3 MB of archives.
+After this operation, 77.7 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+[33m0% [Working][0m[33m0% [Connecting to us-east-1.ec2.archive.ubuntu.com][0m                                                   Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic/universe amd64 daemon amd64 0.6.4-1build1 [99.5 kB]
+[33m                                                   10% [Working][0m[33m10% [Working][0m             Get:1 http://pkg.jenkins.io/debian-stable binary/ jenkins 2.176.2 [77.2 MB]
+[33m10% [1 jenkins 0 B/77.2 MB 0%][0m[33m13% [1 jenkins 2577 kB/77.2 MB 3%][0m[33m16% [1 jenkins 5608 kB/77.2 MB 7%][0m[33m19% [1 jenkins 8716 kB/77.2 MB 11%][0m[33m22% [1 jenkins 11.9 MB/77.2 MB 15%][0m[33m26% [1 jenkins 15.8 MB/77.2 MB 21%][0m[33m31% [1 jenkins 19.9 MB/77.2 MB 26%][0m[33m34% [1 jenkins 22.8 MB/77.2 MB 30%][0m[33m37% [1 jenkins 26.4 MB/77.2 MB 34%][0m[33m42% [1 jenkins 30.5 MB/77.2 MB 40%][0m[33m47% [1 jenkins 35.5 MB/77.2 MB 46%][0m[33m54% [1 jenkins 42.3 MB/77.2 MB 55%][0m[33m63% [1 jenkins 51.4 MB/77.2 MB 67%]                                8231 kB/s 3s[0m[33m76% [1 jenkins 63.3 MB/77.2 MB 82%]                                8231 kB/s 1s[0m[33m87% [1 jenkins 74.0 MB/77.2 MB 96%]                                8231 kB/s 0s[0m[33m100% [Working]                                                     8231 kB/s 0s[0m                                                                               Fetched 77.3 MB in 8s (10.2 MB/s)
+
+7[0;23r8[1ASelecting previously unselected package daemon.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 60429 files and directories currently installed.)
+Preparing to unpack .../daemon_0.6.4-1build1_amd64.deb ...
+7[24;0f[42m[30mProgress: [  0%][49m[39m [..........................................................] 87[24;0f[42m[30mProgress: [  9%][49m[39m [#####.....................................................] 8Unpacking daemon (0.6.4-1build1) ...
+7[24;0f[42m[30mProgress: [ 18%][49m[39m [##########................................................] 87[24;0f[42m[30mProgress: [ 27%][49m[39m [###############...........................................] 8Selecting previously unselected package jenkins.
+Preparing to unpack .../jenkins_2.176.2_all.deb ...
+7[24;0f[42m[30mProgress: [ 36%][49m[39m [#####################.....................................] 8Unpacking jenkins (2.176.2) ...
+7[24;0f[42m[30mProgress: [ 45%][49m[39m [##########################................................] 87[24;0f[42m[30mProgress: [ 55%][49m[39m [###############################...........................] 8Processing triggers for ureadahead (0.100.0-21) ...
+Processing triggers for systemd (237-3ubuntu10.24) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Setting up daemon (0.6.4-1build1) ...
+7[24;0f[42m[30mProgress: [ 64%][49m[39m [####################################......................] 87[24;0f[42m[30mProgress: [ 73%][49m[39m [##########################################................] 8Setting up jenkins (2.176.2) ...
+7[24;0f[42m[30mProgress: [ 82%][49m[39m [###############################################...........] 87[24;0f[42m[30mProgress: [ 91%][49m[39m [####################################################......] 8Processing triggers for ureadahead (0.100.0-21) ...
+Processing triggers for systemd (237-3ubuntu10.24) ...
+
+7[0;24r8[1A[J]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# systemctl status jenkins
+[?1h=[0;1;32m●[0m jenkins.service - LSB: Start Jenkins at boot time[m
+   Loaded: loaded (/etc/init.d/jenkins; generated)[m
+   Active: [0;1;32mactive (exited)[0m since Wed 2019-08-14 01:44:56 UTC; 5min ago[m
+     Docs: man:systemd-sysv-generator(8)[m
+    Tasks: 0 (limit: 1152)[m
+   CGroup: /system.slice/jenkins.service[m
+[m
+Aug 14 01:44:55 ip-172-31-94-28 systemd[1]: Starting LSB: Start Jenkins at boot [m
+Aug 14 01:44:55 ip-172-31-94-28 jenkins[22246]: Correct java version found[m
+Aug 14 01:44:55 ip-172-31-94-28 jenkins[22246]:  * Starting Jenkins Automation S[m
+Aug 14 01:44:55 ip-172-31-94-28 su[22293]: Successful su for jenkins by root[m
+Aug 14 01:44:55 ip-172-31-94-28 su[22293]: + ??? root:jenkins[m
+Aug 14 01:44:55 ip-172-31-94-28 su[22293]: pam_unix(su:session): session opened [m
+Aug 14 01:44:55 ip-172-31-94-28 su[22293]: pam_unix(su:session): session closed [m
+Aug 14 01:44:56 ip-172-31-94-28 jenkins[22246]:    ...done.[m
+Aug 14 01:44:56 ip-172-31-94-28 systemd[1]: Started LSB: Start Jenkins at boot t[m
+[7mlines 1-16/16 (END)[27m[K[H[2J[H[H[2J[H[0;1;32m●[0m jenkins.service - LSB: Start Jenkins at boot time[m
+   Loaded: loaded (/etc/init.d/jenkins; generated)[m
+   Active: [0;1;32mactive (exited)[0m since Wed 2019-08-14 01:44:56 UTC; 5min ago[m
+     Docs: man:systemd-sysv-generator(8)[m
+    Tasks: 0 (limit: 1152)[m
+   CGroup: /system.slice/jenkins.service[m
+[m
+Aug 14 01:44:55 ip-172-31-94-28 systemd[1]: Starting LSB: Start Jenkins at boot time...[m
+Aug 14 01:44:55 ip-172-31-94-28 jenkins[22246]: Correct java version found[m
+Aug 14 01:44:55 ip-172-31-94-28 jenkins[22246]:  * Starting Jenkins Automation Server jenkins[m
+Aug 14 01:44:55 ip-172-31-94-28 su[22293]: Successful su for jenkins by root[m
+Aug 14 01:44:55 ip-172-31-94-28 su[22293]: + ??? root:jenkins[m
+Aug 14 01:44:55 ip-172-31-94-28 su[22293]: pam_unix(su:session): session opened for user jenkins by (uid=0)[m
+Aug 14 01:44:55 ip-172-31-94-28 su[22293]: pam_unix(su:session): session closed for user jenkins[m
+Aug 14 01:44:56 ip-172-31-94-28 jenkins[22246]:    ...done.[m
+Aug 14 01:44:56 ip-172-31-94-28 systemd[1]: Started LSB: Start Jenkins at boot time.[m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[1m~[0m
+[7mlines 1-16/16 (END)[27m[K[K[K[7mlines 1-16/16 (END)[27m[K[K [K::[Kqq[K[?1l>]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# 
+]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# 
+]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# systemctl status jenkins[Kufw status
+Status: inactive
+]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# cat /etc/t[Kdefault/jenkins 
+# defaults for Jenkins automation server
+
+# pulled in from the init script; makes things easier.
+NAME=jenkins
+
+# arguments to pass to java
+
+# Allow graphs etc. to work even when an X server is present
+JAVA_ARGS="-Djava.awt.headless=true"
+
+#JAVA_ARGS="-Xmx256m"
+
+# make jenkins listen on IPv4 address
+#JAVA_ARGS="-Djava.net.preferIPv4Stack=true"
+
+PIDFILE=/var/run/$NAME/$NAME.pid
+
+# user and group to be invoked as (default to jenkins)
+JENKINS_USER=$NAME
+JENKINS_GROUP=$NAME
+
+# location of the jenkins war file
+JENKINS_WAR=/usr/share/$NAME/$NAME.war
+
+# jenkins home location
+JENKINS_HOME=/var/lib/$NAME
+
+# set this to false if you don't want Jenkins to run by itself
+# in this set up, you are expected to provide a servlet container
+# to host jenkins.
+RUN_STANDALONE=true
+
+# log location.  this may be a syslog facility.priority
+JENKINS_LOG=/var/log/$NAME/$NAME.log
+#JENKINS_LOG=daemon.info
+
+# Whether to enable web access logging or not.
+# Set to "yes" to enable logging to /var/log/$NAME/access_log
+JENKINS_ENABLE_ACCESS_LOG="no"
+
+# OS LIMITS SETUP
+#   comment this out to observe /etc/security/limits.conf
+#   this is on by default because http://github.com/jenkinsci/jenkins/commit/2fb288474e980d0e7ff9c4a3b768874835a3e92e
+#   reported that Ubuntu's PAM configuration doesn't include pam_limits.so, and as a result the # of file
+#   descriptors are forced to 1024 regardless of /etc/security/limits.conf
+MAXOPENFILES=8192
+
+# set the umask to control permission bits of files that Jenkins creates.
+#   027 makes files read-only for group and inaccessible for others, which some security sensitive users
+#   might consider benefitial, especially if Jenkins runs in a box that's used for multiple purposes.
+#   Beware that 027 permission would interfere with sudo scripts that run on the master (JENKINS-25065.)
+#
+#   Note also that the particularly sensitive part of $JENKINS_HOME (such as credentials) are always
+#   written without 'others' access. So the umask values only affect job configuration, build records,
+#   that sort of things.
+#
+#   If commented out, the value from the OS is inherited,  which is normally 022 (as of Ubuntu 12.04,
+#   by default umask comes from pam_umask(8) and /etc/login.defs
+
+# UMASK=027
+
+# port for HTTP connector (default 8080; disable with -1)
+HTTP_PORT=8080
+
+
+# servlet context, important if you want to use apache proxying
+PREFIX=/$NAME
+
+# arguments to pass to jenkins.
+# --javahome=$JAVA_HOME
+# --httpListenAddress=$HTTP_HOST (default 0.0.0.0)
+# --httpPort=$HTTP_PORT (default 8080; disable with -1)
+# --httpsPort=$HTTP_PORT
+# --argumentsRealm.passwd.$ADMIN_USER=[password]
+# --argumentsRealm.roles.$ADMIN_USER=admin
+# --webroot=~/.jenkins/war
+# --prefix=$PREFIX
+
+JENKINS_ARGS="--webroot=/var/cache/$NAME/war --httpPort=$HTTP_PORT"
+]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# vi [K[K[Kcat /etc/default/jenkins [C[C[C[C[1P[1P[1P[1P[1@v[1@i[1@m[1@ 
+[?2004h[?1049h[22;0;0t[?1h=[?2004h[1;24r[?12h[?12l[27m[23m[29m[m[H[2J[?25l[24;1H"/etc/default/jenkins" 79L, 2775C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1H[34m# defaults for Jenkins automation server
+
+# pulled in from the init script; makes things easier.[m
+NAME=jenkins
+
+[34m# arguments to pass to java
+
+# Allow graphs etc. to work even when an X server is present[m
+JAVA_ARGS=[31m"-Djava.awt.headless=true"[m
+
+[34m#JAVA_ARGS="-Xmx256m"
+
+# make jenkins listen on IPv4 address
+#JAVA_ARGS="-Djava.net.preferIPv4Stack=true"[m
+
+PIDFILE=/var/run/$NAME/$NAME.pid
+
+[34m# user and group to be invoked as (default to jenkins)[m
+JENKINS_USER=$NAME
+JENKINS_GROUP=$NAME
+
+[34m# location of the jenkins war file[m
+JENKINS_WAR=/usr/share/$NAME/$NAME.war[24;93H1,1[11CTop[1;1H[?25h[27m[23m[29m[m[H[2J[?25l[1;1H[1m[36m# defaults for Jenkins automation server
+
+# pulled in from the init script; makes things easier.[m
+NAME=jenkins
+
+[1m[36m# arguments to pass to java
+
+# Allow graphs etc. to work even when an X server is present[m
+JAVA_ARGS=[1m[35m"-Djava.awt.headless=true"[m
+
+[1m[36m#JAVA_ARGS="-Xmx256m"
+
+# make jenkins listen on IPv4 address
+#JAVA_ARGS="-Djava.net.preferIPv4Stack=true"[m
+
+PIDFILE=/var/run/$NAME/$NAME.pid
+
+[1m[36m# user and group to be invoked as (default to jenkins)[m
+JENKINS_USER=$NAME
+JENKINS_GROUP=$NAME
+
+[1m[36m# location of the jenkins war file[m
+JENKINS_WAR=/usr/share/$NAME/$NAME.war[24;93H1,1[11CTop"/etc/default/jenkins" 79L, 2775C[1;1H[?25h[27m[23m[29m[m[H[2J[?25l[1;1H[1m[36m# defaults for Jenkins automation server
+
+# pulled in from the init script; makes things easier.[m
+NAME=jenkins
+
+[1m[36m# arguments to pass to java
+
+# Allow graphs etc. to work even when an X server is present[m
+JAVA_ARGS=[1m[35m"-Djava.awt.headless=true"[m
+
+[1m[36m#JAVA_ARGS="-Xmx256m"
+
+# make jenkins listen on IPv4 address
+#JAVA_ARGS="-Djava.net.preferIPv4Stack=true"[m
+
+PIDFILE=/var/run/$NAME/$NAME.pid
+
+[1m[36m# user and group to be invoked as (default to jenkins)[m
+JENKINS_USER=$NAME
+JENKINS_GROUP=$NAME
+
+[1m[36m# location of the jenkins war file[m
+JENKINS_WAR=/usr/share/$NAME/$NAME.war
+
+[1m[36m# jenkins home location[m
+JENKINS_HOME=/var/lib/$NAME
+
+[1m[36m# set this to false if you don't want Jenkins to run by itself
+# in this set up, you are expected to provide a servlet container
+# to host jenkins.[m
+RUN_STANDALONE=true
+
+[1m[36m# log location.  this may be a syslog facility.priority[m
+JENKINS_LOG=/var/log/$NAME/$NAME.log
+[1m[36m#JENKINS_LOG=daemon.info
+
+# Whether to enable web access logging or not.
+# Set to "yes" to enable logging to /var/log/$NAME/access_log[m
+JENKINS_ENABLE_ACCESS_LOG=[1m[35m"no"[m
+
+[1m[36m# OS LIMITS SETUP
+#   comment this out to observe /etc/security/limits.conf
+#   this is on by default because http://github.com/jenkinsci/jenkins/commit/2fb288474e980d0e7ff9c4a3b768874835a3e92e
+#   reported that Ubuntu's PAM configuration doesn't include pam_limits.so, and as a result the # of file
+#   descriptors are forced to 1024 regardless of /etc/security/limits.conf[m
+MAXOPENFILES=8192
+
+[1m[36m# set the umask to control permission bits of files that Jenkins creates.
+#   027 makes files read-only for group and inaccessible for others, which some security sensitive users[m[50;175H1,1[11CTop[1;1H[?25h[?25l[50;165H~@k[1;1H[50;165H   [2;1H[50;175H2,0-1[2;1H[?25h[?25l[50;165H~@k[2;1H[50;165H   [3;1H[50;175H3,1  [3;1H[?25h[?25l[50;165H~@k[3;1H[50;165H   [4;1H[50;175H4[4;1H[?25h[?25l[50;165H~@k[4;1H[50;165H   [5;1H[50;175H5,0-1[5;1H[?25h[?25l[50;165H~@k[5;1H[50;165H   [6;1H[50;175H6,1  [6;1H[?25h[?25l[50;165H~@k[6;1H[50;165H   [7;1H[50;175H7,0-1[7;1H[?25h[?25l[50;165H~@k[7;1H[50;165H   [8;1H[50;175H8,1  [8;1H[?25h[?25l[50;165H~@k[8;1H[50;165H   [9;1H[50;175H9[9;1H[?25h[?25l[50;165H~@k[9;1H[50;165H   [10;1H[50;175H10,0-1[10;1H[?25h[?25l[50;165H~@k[10;1H[50;165H   [11;1H[50;176H1,1  [11;1H[?25h[?25l[50;165H~@k[11;1H[50;165H   [12;1H[50;176H2,0-1[12;1H[?25h[?25l[50;165H~@k[12;1H[50;165H   [13;1H[50;176H3,1  [13;1H[?25h[?25l[50;165H~@k[13;1H[50;165H   [14;1H[50;176H4[14;1H[?25h[?25l[50;165H~@k[14;1H[50;165H   [15;1H[50;176H5,0-1[15;1H[?25h[?25l[50;165H~@k[15;1H[50;165H   [16;1H[50;176H6,1  [16;1H[?25h[?25l[50;165H~@k[16;1H[50;165H   [17;1H[50;176H7,0-1[17;1H[?25h[?25l[50;165H~@k[17;1H[50;165H   [18;1H[50;176H8,1  [18;1H[?25h[?25l[50;165H~@k[18;1H[50;165H   [19;1H[50;176H9[19;1H[?25h[?25l[50;165H~@k[19;1H[50;165H   [20;1H[50;175H20[20;1H[?25h[?25l[50;165H~@k[20;1H[50;165H   [21;1H[50;176H1,0-1[21;1H[?25h[?25l[50;165H~@k[21;1H[50;165H   [22;1H[50;176H2,1  [22;1H[?25h[?25l[50;165H~@k[22;1H[50;165H   [23;1H[50;176H3[23;1H[?25h[?25l[50;165H~@k[23;1H[50;165H   [24;1H[50;176H4,0-1[24;1H[?25h[?25l[50;176H5,1  [25;1H[?25h[?25l[50;165H~@k[25;1H[50;165H   [26;1H[50;176H6[26;1H[?25h[?25l[50;176H7,0-1[27;1H[?25h[?25l[50;165H~@k[27;1H[50;165H   [28;1H[50;176H8,1  [28;1H[?25h[?25l[50;165H~@k[28;1H[50;165H   [29;1H[50;176H9[29;1H[?25h[?25l[50;165H~@k[29;1H[50;165H   [30;1H[50;175H30[30;1H[?25h[?25l[50;165H~@k[30;1H[50;165H   [31;1H[50;176H1[31;1H[?25h[?25l[50;165H~@k[31;1H[50;165H   [32;1H[50;176H2,0-1[32;1H[?25h[?25l[50;165H~@k[32;1H[50;165H   [33;1H[50;176H3,1  [33;1H[?25h[?25l[50;165H~@k[33;1H[50;165H   [34;1H[50;176H4[34;1H[?25h[?25l[50;165H~@k[34;1H[50;165H   [35;1H[50;176H5[35;1H[?25h[?25l[50;165H~@k[35;1H[50;165H   [36;1H[50;176H6,0-1[36;1H[?25h[?25l[50;165H~@k[36;1H[50;165H   [37;1H[50;176H7,1  [37;1H[?25h[?25l[50;165H~@k[37;1H[50;165H   [38;1H[50;176H8[38;1H[?25h[?25l[50;165H~@k[38;1H[50;165H   [39;1H[50;176H9[39;1H[?25h[?25l[50;165H~@k[39;1H[50;165H   [40;1H[50;175H40,0-1[40;1H[?25h[?25l[50;165H~@k[40;1H[50;165H   [41;1H[50;176H1,1  [41;1H[?25h[?25l[50;165H~@k[41;1H[50;165H   [42;1H[50;176H2[42;1H[?25h[?25l[50;165H~@k[42;1H[50;165H   [43;1H[50;176H3[43;1H[?25h[?25l[50;165H~@k[43;1H[50;165H   [44;1H[50;176H4[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m#   might consider benefitial, especially if Jenkins runs in a box that's used for multiple purposes.[m[50;175H[K[50;175H45,1[11C3%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m#   Beware that 027 permission would interfere with sudo scripts that run on the master (JENKINS-25065.)[m[50;175H[K[50;175H46,1[11C6%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m#[m[50;175H[K[50;175H47,0-1[8C10%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m#   Note also that the particularly sensitive part of $JENKINS_HOME (such as credentials) are always[m[50;175H[K[50;175H48,1[10C13%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m#   written without 'others' access. So the umask values only affect job configuration, build records,[m[50;175H[K[50;175H49,1[10C16%[44;1H[?25h[?25l[1;49r[49;1H
+[1;50r[49;1H[1m[36m#   that sort of things.[m[50;175H[K[50;175H50,1[10C20%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m#[m[50;175H[K[50;175H51,1[10C23%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m#   If commented out, the value from the OS is inherited,  which is normally 022 (as of Ubuntu 12.04,[m[50;175H[K[50;175H52,1[10C26%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m#   by default umask comes from pam_umask(8) and /etc/login.defs[m[50;175H[K[50;175H53,1[10C30%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[50;175H[K[50;175H54,1[10C33%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m# UMASK=027[m[50;175H[K[50;175H55,1[10C36%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[50;175H[K[50;175H56,1[10C40%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m# port for HTTP connector (default 8080; disable with -1)[m[50;175H[K[50;175H57,1[10C43%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1HHTTP_PORT=8080[50;175H[K[50;175H58,1[10C46%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[50;175H[K[50;175H59,0-1[8C50%[44;1H[?25h[?25l[1;49r[49;1H
+[1;50r[50;175H[K[50;175H60,1[10C53%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m# servlet context, important if you want to use apache proxying[m[50;175H[K[50;175H61,0-1[8C56%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1HPREFIX=/$NAME[50;175H[K[50;175H62,1[10C60%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[50;175H[K[50;175H63,1[10C63%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m# arguments to pass to jenkins.[m[50;175H[K[50;175H64,0-1[8C66%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m# --javahome=$JAVA_HOME[m[50;175H[K[50;175H65,0-1[8C70%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m# --httpListenAddress=$HTTP_HOST (default 0.0.0.0)[m[50;175H[K[50;175H66,1[10C73%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m# --httpPort=$HTTP_PORT (default 8080; disable with -1)[m[50;175H[K[50;175H67,1[10C76%[44;1H[?25h[?25l[1;49r[49;1H
+[1;50r[49;1H[1m[36m# --httpsPort=$HTTP_PORT[m[50;175H[K[50;175H68,0-1[8C80%[44;1H[?25h[?25l[1;49r[49;1H
+[1;50r[49;1H[1m[36m# --argumentsRealm.passwd.$ADMIN_USER=[password][m[50;175H[K[50;175H69,1[10C83%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m# --argumentsRealm.roles.$ADMIN_USER=admin[m[50;175H[K[50;175H70,1[10C86%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m# --webroot=~/.jenkins/war[m[50;175H[K[50;175H71,1[10C90%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1H[1m[36m# --prefix=$PREFIX[m[50;175H[K[50;175H72,1[10C93%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[50;175H[K[50;175H73,1[10C96%[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [44;1H[1;49r[49;1H
+[1;50r[49;1HJENKINS_ARGS=[1m[35m"--webroot=/var/cache/$NAME/war --httpPort=$HTTP_PORT"[m[50;175H[K[50;175H74,1[10CBot[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [45;1H[50;176H5[45;1H[?25h[?25l[50;165H~@k[45;1H[50;165H   [46;1H[50;176H6[46;1H[?25h[?25l[50;165H~@k[46;1H[50;165H   [47;1H[50;176H7[47;1H[?25h[?25l[50;165H~@k[47;1H[50;165H   [48;1H[50;176H8,0-1[48;1H[?25h[?25l[50;176H9,1  [49;1H[?25h[?25l[50;165H~@k[49;1H[50;165H   [49;1H[?25h[?25l[50;165H~@k[49;1H[50;165H   [49;1H[?25h[?25l[50;165H~@k[49;1H[50;165H   [48;1H[50;176H8,0-1[48;1H[?25h[?25l[50;165H~@k[48;1H[50;165H   [47;1H[50;176H7,1  [47;1H[?25h[?25l[50;165H~@k[47;1H[50;165H   [46;1H[50;176H6[46;1H[?25h[?25l[50;165H~@k[46;1H[50;165H   [45;1H[50;176H5[45;1H[?25h[?25l[50;165H~@k[45;1H[50;165H   [44;1H[50;176H4[44;1H[?25h[?25l[50;165H~@k[44;1H[50;165H   [43;1H[50;176H3[43;1H[?25h[?25l[50;165H~@k[43;1H[50;165H   [42;1H[50;176H2[42;1H[?25h[?25l[50;165H~@k[42;1H[50;165H   [41;1H[50;176H1[41;1H[?25h[?25l[50;165H~@k[41;1H[50;165H   [40;1H[50;176H0[40;1H[?25h[?25l[50;165H~@k[40;1H[50;165H   [39;1H[50;175H69[39;1H[?25h[?25l[50;165H~@k[39;1H[50;165H   [38;1H[50;176H8,0-1[38;1H[?25h[?25l[50;165H~@k[38;1H[50;165H   [37;1H[50;176H7,1  [37;1H[?25h[?25l[50;165H~@k[37;1H[50;165H   [36;1H[50;176H6[36;1H[?25h[?25l[50;165H~@k[36;1H[50;165H   [35;1H[50;176H5,0-1[35;1H[?25h[?25l[50;165H~@k[35;1H[50;165H   [34;1H[50;176H4[34;1H[?25h[?25l[50;165H~@k[34;1H[50;165H   [33;1H[50;176H3,1  [33;1H[?25h[?25l[50;165H~@k[33;1H[50;165H   [33;2H[50;178H2[33;2H[?25h[?25l[50;165H~@k[33;2H[50;165H   [33;3H[50;178H3[33;3H[?25h[?25l[50;165H~@k[33;3H[50;165H   [33;4H[50;178H4[33;4H[?25h[?25l[50;165H~@k[33;4H[50;165H   [33;5H[50;178H5[33;5H[?25h[?25l[50;165H~@k[33;5H[50;165H   [33;6H[50;178H6[33;6H[?25h[?25l[50;178H7[33;7H[?25h[?25l[50;165H~@k[33;7H[50;165H   [33;8H[50;178H8[33;8H[?25h[?25l[50;165H~@k[33;8H[50;165H   [33;9H[50;178H9[33;9H[?25h[?25l[50;165H~@k[33;9H[50;165H   [33;10H[50;178H10[33;10H[?25h[?25l[50;165H~@k[33;10H[50;165H   [33;11H[50;179H1[33;11H[?25h[?25l[50;165H~@k[33;11H[50;165H   [33;12H[50;179H2[33;12H[?25h[?25l[50;165H~@k[33;12H[50;165H   [33;13H[50;179H3[33;13H[?25h[?25l[50;165H~@k[33;13H[50;165H   [33;14H[50;179H4[33;14H[?25h[?25l[50;165H~@k[33;14H[50;165H   [33;14H[?25h[?25l[50;165H~@k[33;14H[50;165H   [33;14H[?25h[?25l[50;165H~@k[33;14H[50;165H   [33;14H[?25h[?25l[50;165H~@k[33;14H[50;165H   [33;14H[?25h[?25l[50;165H~@k[33;14H[50;165H   [33;14H[?25h[?25l[50;165H~@k[33;14H[50;165H   [33;14H[?25h[?25l[50;165H~@k[33;14H[50;165H   [33;14H[?25h[?25l[50;165H~@k[33;14H[50;165H   [33;14H[?25h[?25l[50;165H~@k[33;14H[50;165H   [33;14H[?25h[?25l[50;165H~@k[33;14H[50;165H   [33;14H[?25h[?25l[50;165H~@k[33;14H[50;165H   [33;14H[?25h[?25l[50;165H~@k[33;14H[50;165H   [33;14H[?25h[?25l[50;165H~@k[33;14H[50;165H   [33;14H[?25h[?25l[50;165H^[[33;14H[50;165H  [33;14H[50;165H^[[33;14H[50;165H  [33;14H[?25h[?25l[50;165H~@k[33;14H[50;165H   [33;13H[50;179H3[33;13H[?25h[?25l[50;165H^[[33;13H[50;165H  [33;13H[50;165H^[[33;13H[50;165H  [33;13H[?25h[?25l[50;165Hx[33;13H[50;165H [33;13H[50;165Hdl[33;13H[50;165H  [33;13H0[33;14H[K[33;13H[?25h[?25l[50;165H^[[33;13H[50;165H  [33;13H[50;165H^[[33;13H[50;165H  [33;13H[?25h[?25l[50;165Hi[33;13H[50;165H [33;13H[50;1H[1m-- INSERT --[m[50;175H[K[50;175H63,13[9CBot[33;13H[?25h[?25l90[50;179H4[33;14H[?25h[50;1H[K[33;13H[?25l[50;165H^[[33;13H[50;165H  [33;14H[50;175H63,13[9CBot[33;13H[?25h[?25l[50;165H^[[33;13H[50;165H  [33;13H[50;165H^[[33;13H[50;165H  [33;13H[?25h[?25l[50;165H:[33;13H[50;165H[K[50;1H:[?2004h[?25hw[?25l[?25hq[?25l[?25h[?25l[?2004l"/etc/default/jenkins" 79L, 2775C written
+[?2004l[?1l>[?25h[?1049l[23;0;0t]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# vim /etc/default/jenkins cat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+# defaults for Jenkins automation server
+
+# pulled in from the init script; makes things easier.
+NAME=jenkins
+
+# arguments to pass to java
+
+# Allow graphs etc. to work even when an X server is present
+JAVA_ARGS="-Djava.awt.headless=true"
+
+#JAVA_ARGS="-Xmx256m"
+
+# make jenkins listen on IPv4 address
+#JAVA_ARGS="-Djava.net.preferIPv4Stack=true"
+
+PIDFILE=/var/run/$NAME/$NAME.pid
+
+# user and group to be invoked as (default to jenkins)
+JENKINS_USER=$NAME
+JENKINS_GROUP=$NAME
+
+# location of the jenkins war file
+JENKINS_WAR=/usr/share/$NAME/$NAME.war
+
+# jenkins home location
+JENKINS_HOME=/var/lib/$NAME
+
+# set this to false if you don't want Jenkins to run by itself
+# in this set up, you are expected to provide a servlet container
+# to host jenkins.
+RUN_STANDALONE=true
+
+# log location.  this may be a syslog facility.priority
+JENKINS_LOG=/var/log/$NAME/$NAME.log
+#JENKINS_LOG=daemon.info
+
+# Whether to enable web access logging or not.
+# Set to "yes" to enable logging to /var/log/$NAME/access_log
+JENKINS_ENABLE_ACCESS_LOG="no"
+
+# OS LIMITS SETUP
+#   comment this out to observe /etc/security/limits.conf
+#   this is on by default because http://github.com/jenkinsci/jenkins/commit/2fb288474e980d0e7ff9c4a3b768874835a3e92e
+#   reported that Ubuntu's PAM configuration doesn't include pam_limits.so, and as a result the # of file
+#   descriptors are forced to 1024 regardless of /etc/security/limits.conf
+MAXOPENFILES=8192
+
+# set the umask to control permission bits of files that Jenkins creates.
+#   027 makes files read-only for group and inaccessible for others, which some security sensitive users
+#   might consider benefitial, especially if Jenkins runs in a box that's used for multiple purposes.
+#   Beware that 027 permission would interfere with sudo scripts that run on the master (JENKINS-25065.)
+#
+#   Note also that the particularly sensitive part of $JENKINS_HOME (such as credentials) are always
+#   written without 'others' access. So the umask values only affect job configuration, build records,
+#   that sort of things.
+#
+#   If commented out, the value from the OS is inherited,  which is normally 022 (as of Ubuntu 12.04,
+#   by default umask comes from pam_umask(8) and /etc/login.defs
+
+# UMASK=027
+
+# port for HTTP connector (default 8080; disable with -1)
+HTTP_PORT=8090
+
+
+# servlet context, important if you want to use apache proxying
+PREFIX=/$NAME
+
+# arguments to pass to jenkins.
+# --javahome=$JAVA_HOME
+# --httpListenAddress=$HTTP_HOST (default 0.0.0.0)
+# --httpPort=$HTTP_PORT (default 8080; disable with -1)
+# --httpsPort=$HTTP_PORT
+# --argumentsRealm.passwd.$ADMIN_USER=[password]
+# --argumentsRealm.roles.$ADMIN_USER=admin
+# --webroot=~/.jenkins/war
+# --prefix=$PREFIX
+
+JENKINS_ARGS="--webroot=/var/cache/$NAME/war --httpPort=$HTTP_PORT"
+]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# systemctl restart k[Kjenkind[Ks
+]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# system status jenkins
+
+Command 'system' not found, did you mean:
+
+  command 'systemd' from deb systemd
+  command 'system3' from deb simh
+
+Try: apt install <deb name>
+
+]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# system status jenkins[1@c[1@t[1@l
+[?1h=[0;1;32m●[0m jenkins.service - LSB: Start Jenkins at boot time[m
+   Loaded: loaded (/etc/init.d/jenkins; generated)[m
+   Active: [0;1;32mactive (exited)[0m since Wed 2019-08-14 02:02:36 UTC; 20s ago[m
+     Docs: man:systemd-sysv-generator(8)[m
+  Process: 22481 ExecStop=/etc/init.d/jenkins stop (code=exited, status=0/SUCCESS)[m
+  Process: 22532 ExecStart=/etc/init.d/jenkins start (code=exited, status=0/SUCCESS)[m
+[m
+Aug 14 02:02:34 ip-172-31-94-28 systemd[1]: Stopped LSB: Start Jenkins at boot time.[m
+Aug 14 02:02:34 ip-172-31-94-28 systemd[1]: Starting LSB: Start Jenkins at boot time...[m
+Aug 14 02:02:34 ip-172-31-94-28 jenkins[22532]: Correct java version found[m
+Aug 14 02:02:34 ip-172-31-94-28 jenkins[22532]:  * Starting Jenkins Automation Server jenkins[m
+Aug 14 02:02:35 ip-172-31-94-28 su[22578]: Successful su for jenkins by root[m
+Aug 14 02:02:35 ip-172-31-94-28 su[22578]: + ??? root:jenkins[m
+Aug 14 02:02:35 ip-172-31-94-28 su[22578]: pam_unix(su:session): session opened for user jenkins by (uid=0)[m
+Aug 14 02:02:35 ip-172-31-94-28 su[22578]: pam_unix(su:session): session closed for user jenkins[m
+Aug 14 02:02:36 ip-172-31-94-28 jenkins[22532]:    ...done.[m
+Aug 14 02:02:36 ip-172-31-94-28 systemd[1]: Started LSB: Start Jenkins at boot time.[m
+[K[?1l>]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# [K]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# cat /var/lib/k[Kjenkins/secrets/initialAdminPassword 
+0fe7c1076818492d9888f285add603f3
+]0;root@ip-172-31-94-28: /opt/notes/08132019root@ip-172-31-94-28:/opt/notes/08132019# exit
+exit
+
+Script done on 2019-08-14 02:15:40+0000
